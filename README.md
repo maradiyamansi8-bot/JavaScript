@@ -941,5 +941,102 @@ function rps2(user, computer) {
   <li>Best practice for interviews</li>
 </ul>
 <hr>
+<h1>JavaScript Loops</h1>
+<p>This repository demonstrates different types of loops in JavaScript with examples.</p>
+<hr>
+<h2>For Loop</h2>
+<p>
+Use a <b>for loop</b> when you know how many times you want to repeat a block of code.
+</p>
+<p><b>Syntax:</b></p>
+<pre><code>
+for (start; condition; change) {
+  // code
+}
+</code></pre>
+<p><b>Example: Print numbers from 1 to 10</b></p>
+<pre><code>
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}
+</code></pre>
+<p><b>Example: Print numbers from 20 to 10</b></p>
+<pre><code>
+for (let i = 20; i >= 10; i--) {
+  console.log(i);
+}
+</code></pre>
+<hr>
+<h2>While Loop</h2>
+<p>
+Use a <b>while loop</b> when the number of repetitions is not fixed.
+</p>
+<p><b>Syntax:</b></p>
+<pre><code>
+start;
+while (condition) {
+  // code
+  change;
+}
+</code></pre>
+<p><b>Example: Print numbers from 10 to 20</b></p>
+<pre><code>
+let j = 10;
+while (j <= 20) {
+  console.log(j);
+  j++;
+}
+</code></pre>
+<p><b>Example: Countdown from 30 to 21</b></p>
+<pre><code>
+let c = 30;
+while (c > 20) {
+  console.log(c);
+  c--;
+}
+</code></pre>
+<p><b>Example: Print "hello" 5 times</b></p>
+<pre><code>
+let i = 0;
+while (i < 5) {
+  console.log("hello");
+  i++;
+}
+</code></pre>
+<hr>
+<h2>Do While Loop</h2>
+<p>
+A <b>do while loop</b> runs at least once even if the condition is false.
+</p>
+<p><b>Syntax:</b></p>
+<pre><code>
+do {
+  // code
+  change;
+} while (condition);
+</code></pre>
+<p><b>Example: Print numbers from 1 to 5</b></p>
+<pre><code>
+let riddhi = 1;
+do {
+  console.log(riddhi);
+  riddhi++;
+} while (riddhi <= 5);
+</code></pre>
+<p><b>Example: Print numbers from 10 to 1</b></p>
+<pre><code>
+let h = 10;
+do {
+  console.log(h);
+  h--;
+} while (h >= 1);
+</code></pre>
+<hr>
+<h2>Conclusion</h2>
+<ul>
+  <li><b>for loop</b> → when repetition count is known</li>
+  <li><b>while loop</b> → when condition-based repetition is needed</li>
+  <li><b>do while loop</b> → when code must run at least once</li>
+</ul>
 
 
