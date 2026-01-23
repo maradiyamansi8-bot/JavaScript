@@ -941,5 +941,651 @@ function rps2(user, computer) {
   <li>Best practice for interviews</li>
 </ul>
 <hr>
+<h1>JavaScript Loops</h1>
+<p>This repository demonstrates different types of loops in JavaScript with examples.</p>
+<hr>
+<h2>For Loop</h2>
+<p>
+Use a <b>for loop</b> when you know how many times you want to repeat a block of code.
+</p>
+<p><b>Syntax:</b></p>
+<pre><code>
+for (start; condition; change) {
+  // code
+}
+</code></pre>
+<p><b>Example: Print numbers from 1 to 10</b></p>
+<pre><code>
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}
+</code></pre>
+<p><b>Example: Print numbers from 20 to 10</b></p>
+<pre><code>
+for (let i = 20; i >= 10; i--) {
+  console.log(i);
+}
+</code></pre>
+<hr>
+<h2>While Loop</h2>
+<p>
+Use a <b>while loop</b> when the number of repetitions is not fixed.
+</p>
+<p><b>Syntax:</b></p>
+<pre><code>
+start;
+while (condition) {
+  // code
+  change;
+}
+</code></pre>
+<p><b>Example: Print numbers from 10 to 20</b></p>
+<pre><code>
+let j = 10;
+while (j <= 20) {
+  console.log(j);
+  j++;
+}
+</code></pre>
+<p><b>Example: Countdown from 30 to 21</b></p>
+<pre><code>
+let c = 30;
+while (c > 20) {
+  console.log(c);
+  c--;
+}
+</code></pre>
+<p><b>Example: Print "hello" 5 times</b></p>
+<pre><code>
+let i = 0;
+while (i < 5) {
+  console.log("hello");
+  i++;
+}
+</code></pre>
+<hr>
+<h2>Do While Loop</h2>
+<p>
+A <b>do while loop</b> runs at least once even if the condition is false.
+</p>
+<p><b>Syntax:</b></p>
+<pre><code>
+do {
+  // code
+  change;
+} while (condition);
+</code></pre>
+<p><b>Example: Print numbers from 1 to 5</b></p>
+<pre><code>
+let riddhi = 1;
+do {
+  console.log(riddhi);
+  riddhi++;
+} while (riddhi <= 5);
+</code></pre>
+<p><b>Example: Print numbers from 10 to 1</b></p>
+<pre><code>
+let h = 10;
+do {
+  console.log(h);
+  h--;
+} while (h >= 1);
+</code></pre>
+<hr>
+<h2>Conclusion</h2>
+<ul>
+  <li><b>for loop</b> → when repetition count is known</li>
+  <li><b>while loop</b> → when condition-based repetition is needed</li>
+  <li><b>do while loop</b> → when code must run at least once</li>
+</ul>
+<div>
+  <h3>Example (Break)</h3>
+
+  <pre><code>
+for (let k = 1; k <= 201; k++) {
+  console.log(k);
+  if (k === 32) {
+    break;
+  }
+}
+  </code></pre>
+
+  <p><b>Answer:</b> Prints numbers from 1 to 32.</p>
+  <p><b>Why:</b> break stops the loop when k becomes 32.</p>
+</div>
+
+<div>
+  <h3>Example (Break)</h3>
+
+  <pre><code>
+for (let m = 1; m <= 20; m++) {
+  console.log(m);
+  if (m === 15) {
+    break;
+  }
+}
+  </code></pre>
+
+  <p><b>Answer:</b> Prints numbers from 1 to 15.</p>
+  <p><b>Why:</b> break terminates the loop at 15.</p>
+</div>
+
+<div>
+  <h3>Example (Continue)</h3>
+
+  <pre><code>
+for (let a = 1; a <= 10; a++) {
+  if (a === 50) {
+    continue;
+  }
+  console.log(a);
+}
+  </code></pre>
+
+  <p><b>Answer:</b> Prints numbers from 1 to 10.</p>
+  <p><b>Why:</b> Condition is never true, so continue never runs.</p>
+</div>
+
+<div>
+  <h3>Example (Continue)</h3>
+
+  <pre><code>
+for (let a = 2; a <= 20; a++) {
+  if (a === 50) {
+    continue;
+  }
+  console.log(a);
+}
+  </code></pre>
+
+  <p><b>Answer:</b> Prints numbers from 2 to 20.</p>
+  <p><b>Why:</b> a never becomes 50, so continue is skipped.</p>
+</div>
 
 
+<div>
+  <h1>Example 1</h1>
+  <p>Print number from 1 to 10 using a for loop.</p>
+  <pre><code>
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}
+  </code></pre>
+  <p><b>Answer:</b> Prints numbers from 1 to 10.</p>
+  <p><b>Why:</b> The loop runs 10 times starting from 1.</p>
+</div>
+<div>
+  <h1>Example 2</h1>
+  <p>Print number from 10 to 1 using while loop.</p>
+  <pre><code>
+let q = 10;
+while (q >= 1) {
+  console.log(q);
+  q--;
+}
+  </code></pre>
+  <p><b>Answer:</b> Prints numbers from 10 to 1.</p>
+  <p><b>Why:</b> q decreases by 1 on each iteration.</p>
+</div>
+<div>
+  <h1>Example 3</h1>
+  <p>Print even numbers from 1 to 20.</p>
+  <pre><code>
+for (let i = 1; i <= 20; i++) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
+}
+  </code></pre>
+  <p><b>Answer:</b> Prints all even numbers.</p>
+  <p><b>Why:</b> Even numbers are divisible by 2.</p>
+</div>
+<div>
+  <h1>Example 4</h1>
+  <p>Print odd numbers from 1 to 15.</p>
+  <pre><code>
+let i = 1;
+while (i <= 15) {
+  if (i % 2 !== 0) {
+    console.log(i);
+  }
+  i++;
+}
+  </code></pre>
+  <p><b>Answer:</b> Prints all odd numbers.</p>
+  <p><b>Why:</b> Odd numbers are not divisible by 2.</p>
+</div>
+<div>
+  <h1>Example 5</h1>
+  <p>Print multiplication table of 5.</p>
+  <pre><code>
+for (let i = 1; i <= 10; i++) {
+  console.log(`5 x ${i} = ${5 * i}`);
+}
+  </code></pre>
+  <p><b>Answer:</b> Prints table of 5.</p>
+  <p><b>Why:</b> Loop multiplies 5 with numbers 1 to 10.</p>
+</div>
+<div>
+  <h1>Example 6</h1>
+  <p>Find the sum of numbers from 1 to 100.</p>
+  <pre><code>
+let sum = 0;
+
+for (let i = 1; i <= 100; i++) {
+  sum = sum + i;
+}
+
+console.log(sum);
+  </code></pre>
+  <p><b>Answer:</b> 5050</p>
+  <p><b>Why:</b> All numbers from 1 to 100 are added.</p>
+</div>
+<div>
+  <h1>Example 7</h1>
+  <p>Print numbers between 1 to 50 divisible by 3.</p>
+  <pre><code>
+for (let i = 1; i <= 50; i++) {
+  if (i % 3 === 0) {
+    console.log(i);
+  }
+}
+  </code></pre>
+  <p><b>Answer:</b> Prints multiples of 3.</p>
+  <p><b>Why:</b> Condition checks divisibility by 3.</p>
+</div>
+<div>
+  <h1>Example 8</h1>
+  <p>Check whether numbers are even or odd up to user input.</p>
+  <pre><code>
+let num = prompt("Enter a number");
+
+for (let i = 1; i <= num; i++) {
+  if (i % 2 === 0) {
+    console.log(i + " is even");
+  } else {
+    console.log(i + " is odd");
+  }
+}
+  </code></pre>
+  <p><b>Answer:</b> Prints even or odd for each number.</p>
+  <p><b>Why:</b> Modulus operator checks remainder.</p>
+</div>
+<div>
+  <h1>Example 9</h1>
+  <p>Count numbers divisible by 3 or 5 between 1 to 100.</p>
+  <pre><code>
+let count = 0;
+
+for (let i = 1; i <= 100; i++) {
+  if (i % 3 === 0 || i % 5 === 0) {
+    count++;
+  }
+}
+
+console.log(count);
+  </code></pre>
+  <p><b>Answer:</b> Prints total count.</p>
+  <p><b>Why:</b> Logical OR checks both conditions.</p>
+</div>
+<div>
+  <h1>Example 10 (Break)</h1>
+  <p>Stop loop at first multiple of 7.</p>
+  <pre><code>
+for (let i = 1; i <= 100; i++) {
+  console.log(i);
+  if (i % 7 === 0) {
+    break;
+  }
+}
+  </code></pre>
+  <p><b>Answer:</b> Loop stops at 7.</p>
+  <p><b>Why:</b> break keyword terminates the loop.</p>
+</div>
+<div>
+  <h1>Example 11 (Continue)</h1>
+  <p>Skip multiples of 3.</p>
+  <pre><code>
+for (let i = 1; i <= 20; i++) {
+  if (i % 3 === 0) {
+    continue;
+  }
+  console.log(i);
+}
+  </code></pre>
+  <p><b>Answer:</b> Prints all except multiples of 3.</p>
+  <p><b>Why:</b> continue skips current iteration.</p>
+</div>
+<div>
+  <h1>Example 12</h1>
+  <p>Print first 5 odd numbers only.</p>
+  <pre><code>
+let count = 0;
+
+for (let i = 1; i <= 100; i++) {
+  if (i % 2 === 0) continue;
+
+  console.log(i);
+  count++;
+
+  if (count === 5) {
+    break;
+  }
+}
+  </code></pre>
+  <p><b>Answer:</b> Prints first 5 odd numbers.</p>
+  <p><b>Why:</b> Counter limits output and break stops loop.</p>
+</div>
+<h1>JavaScript Functions</h1>
+<p>
+A function is a block of code that performs a specific task.
+</p>
+<hr>
+<h2>What is a Function?</h2>
+<p>
+A function is a reusable block of code designed to perform a particular task.
+</p>
+<h2>Why use Functions?</h2>
+<ul>
+  <li>To avoid code repetition</li>
+  <li>To make code modular</li>
+  <li>To improve code reusability</li>
+  <li>To improve readability</li>
+</ul>
+<h2>How to create a Function?</h2>
+<p>
+A function consists of the following parts:
+</p>
+<ul>
+  <li>Function keyword</li>
+  <li>Function name</li>
+  <li>Parameters</li>
+  <li>Function body</li>
+  <li>Return statement (optional)</li>
+</ul>
+<hr>
+<h2>Types of Functions</h2>
+<h3>Function Declaration</h3>
+<p>
+function abc() { }
+</p>
+<h3>Arrow Function (Fat Arrow Function)</h3>
+<p>
+let func1 = () => { }
+</p>
+<hr>
+<h2>Example: temp_cart Function</h2>
+<p>
+This function simulates adding a product to the cart.
+</p>
+<p>
+function temp_cart(){<br>
+&nbsp;&nbsp;console.log("adding product")<br>
+}
+</p>
+<p>
+Function Calls:
+</p>
+<ul>
+  <li>temp_cart("laptop")</li>
+  <li>temp_cart("watch")</li>
+  <li>temp_cart("mobile")</li>
+</ul>
+<hr>
+<h2>Parameters vs Arguments</h2>
+<h3>Parameters</h3>
+<p>
+Parameters are the variables listed inside the parentheses in the function definition.
+</p>
+<h3>Arguments</h3>
+<p>
+Arguments are the actual values passed to the function when the function is called.
+</p>
+<hr>
+<h2>Example: Single Parameter Function</h2>
+<p>
+function fullname(name){<br>
+&nbsp;&nbsp;console.log("My Name is: " + name)<br>
+}
+</p>
+<ul>
+  <li>fullname("riddhi")</li>
+  <li>fullname("mansi")</li>
+  <li>fullname("jinal")</li>
+</ul>
+<hr>
+<h2>Example: Multiple Parameters Function</h2>
+<p>
+function fullname1(name, surname){<br>
+&nbsp;&nbsp;console.log("Name: " + name + " Surname: " + surname)<br>
+}
+</p>
+<ul>
+  <li>fullname1("riddhi", "jikadra")</li>
+  <li>fullname1("mansi", "maradiya")</li>
+  <li>fullname1("jinal", "gohil")</li>
+</ul>
+<hr>
+
+<h1>JavaScript Advanced Functions</h1>
+
+<p>
+This document explains arrow functions, function expressions, default parameters,
+rest parameters, early return, and first-class functions in JavaScript.
+</p>
+
+<hr>
+
+<h2>Arrow Function</h2>
+
+<p>
+Arrow functions provide a shorter syntax to write functions.
+</p>
+
+<p>
+let fullname2 = (name, surname) => {<br>
+&nbsp;&nbsp;console.log("arrow function -- Name:" + name + " surname: " + surname);<br>
+}
+</p>
+
+<p>
+Function Call:
+</p>
+
+<p>
+fullname2("mansi", "maradiya")
+</p>
+
+<hr>
+
+<h2>Function Expression</h2>
+
+<p>
+A function can be stored inside a variable. This is called a function expression.
+</p>
+
+<p>
+const fullname3 = function fullname1(name, surname) {<br>
+&nbsp;&nbsp;console.log("function expression -- Name:" + name + " surname: " + surname);<br>
+}
+</p>
+
+<p>
+Function Call:
+</p>
+
+<p>
+fullname3("jinal", "gohil")
+</p>
+
+<hr>
+
+<h2>Default Parameters</h2>
+
+<p>
+Default parameters allow assigning default values to function parameters.
+</p>
+
+<p>
+function abcd(b = 10, price = 0) {<br>
+&nbsp;&nbsp;console.log(b, price);<br>
+}
+</p>
+
+<p>
+Function Call:
+</p>
+
+<p>
+abcd(15)
+</p>
+
+<p>
+Use case example: platform fee, service charges, or fixed fees.
+</p>
+
+<hr>
+
+<h2>Rest Parameters</h2>
+
+<p>
+Rest parameters are used when we do not know how many arguments will be passed.
+They collect multiple arguments into an array.
+</p>
+
+<p>
+function def1(...name) {<br>
+&nbsp;&nbsp;console.log(name);<br>
+}
+</p>
+
+<p>
+Function Call:
+</p>
+
+<p>
+def1("mansi", "jinal", "riddhi")
+</p>
+
+<p>
+Rest parameters can also be used with normal parameters.
+</p>
+
+<p>
+function def1(a, ...name) {<br>
+&nbsp;&nbsp;console.log(a, name);<br>
+}
+</p>
+
+<p>
+Function Call:
+</p>
+
+<p>
+def1("mansi", "jinal", "riddhi")
+</p>
+
+<hr>
+
+<h2>Early Return</h2>
+<p>
+Early return is used to exit a function as soon as a condition is met.
+</p>
+<p>
+function score1(value) {<br>
+&nbsp;&nbsp;if (value &gt; 90) return "Value is less than 90";<br>
+&nbsp;&nbsp;else if (value &lt; 80) return "Value is less than 80";<br>
+&nbsp;&nbsp;else if (value &lt; 70) return "Value is less than 70";<br>
+&nbsp;&nbsp;else if (value &lt; 60) return "Value is less than 60";<br>
+&nbsp;&nbsp;else return "Value is more than 90";<br>
+}
+</p>
+<p>
+Example:
+</p>
+<p>
+let result = score1(80)
+</p>
+<hr>
+<h2>First-Class Functions</h2>
+<p>
+In JavaScript, functions are treated as first-class citizens.
+This means functions can be stored in variables, passed as arguments,
+and returned from other functions.
+</p>
+<h3>Function Stored in a Variable</h3>
+<p>
+const cart3 = function(product, price) {<br>
+&nbsp;&nbsp;console.log("Adding " + product + " at " + price);<br>
+}
+</p>
+<p>
+cart3("function expression - s25", 45000)
+</p>
+<hr>
+<h3>Function Passed as an Argument</h3>
+<p>
+function temp_b(fnc) {<br>
+&nbsp;&nbsp;fnc();<br>
+}
+</p>
+<p>
+temp_b(function fnc2() {<br>
+&nbsp;&nbsp;console.log("First Class Function");<br>
+})
+</p>
+<hr>
+<h3>Function Returned from Another Function</h3>
+<p>
+function abcd() {<br>
+&nbsp;&nbsp;return function() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;console.log("function return other function");<br>
+&nbsp;&nbsp;};<br>
+}
+</p>
+<p>
+Function Call:
+</p>
+<p>
+abcd()();
+</p>
+<hr>
+<p><b>End of JavaScript Functions Documentation</b></p>
+<h2>Higher-Order Functions (HOF)</h2>
+
+<p>
+A higher-order function is a function that either:
+<ul>
+  <li>Takes another function as an argument</li>
+  <li>Returns a function as a result</li>
+</ul>
+These functions allow more flexible and reusable code.
+</p>
+
+<h3>Example: Passing a Function as an Argument</h3>
+
+<p>
+A higher-order function can accept a function as a parameter:
+</p>
+
+<pre><code>
+function abcd(val) {
+    val(); // call the function passed as argument
+}
+abcd(function() {
+    console.log("Hello from argument function");
+});
+</code></pre>
+
+<h3>Example: Returning a Function</h3>
+<p>
+A higher-order function can return another function:
+</p>
+<pre><code>
+function abcd() {
+    return function() {
+        console.log("Hello from returned function");
+    };
+}
+abcd()(); // call the returned function
+</code></pre>
