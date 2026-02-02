@@ -610,15 +610,15 @@ a instanceof Object  // true
 </div>
 <h1>JavaScript Control Flow Statements</h1>
 <p>
-Control flow statements in JavaScript allow you to control the execution of code
-based on conditions. This README explains <strong>if</strong>, <strong>if-else</strong>,
-<strong>if-else if-else</strong>, and <strong>switch</strong> statements with examples.
+  Control flow statements in JavaScript allow you to control the execution of code
+  based on conditions. This README explains <strong>if</strong>, <strong>if-else</strong>,
+  <strong>if-else if-else</strong>, and <strong>switch</strong> statements with examples.
 </p>
 <hr>
 <h2>1. If Statement</h2>
 <p>
-The <strong>if</strong> statement executes a block of code only when the given condition
-evaluates to <code>true</code>.
+  The <strong>if</strong> statement executes a block of code only when the given condition
+  evaluates to <code>true</code>.
 </p>
 <pre><code>
 // Example 1
@@ -634,8 +634,8 @@ if (1513) {
 }
 </code></pre>
 <p>
-<strong>Explanation:</strong> Any non-zero number in JavaScript is treated as
-<code>true</code>, so this condition runs.
+  <strong>Explanation:</strong> Any non-zero number in JavaScript is treated as
+  <code>true</code>, so this condition runs.
 </p>
 <pre><code>
 // Example 3
@@ -644,13 +644,13 @@ if (112) {
 }
 </code></pre>
 <p>
-<strong>Explanation:</strong> Non-zero numbers are <strong>truthy</strong> values.
+  <strong>Explanation:</strong> Non-zero numbers are <strong>truthy</strong> values.
 </p>
 <hr>
 <h2>2. If-Else Statement</h2>
 <p>
-The <strong>if-else</strong> statement runs one block if the condition is true and
-another block if it is false.
+  The <strong>if-else</strong> statement runs one block if the condition is true and
+  another block if it is false.
 </p>
 <pre><code>
 // Example 1
@@ -669,8 +669,8 @@ if (15 &lt; 13) {
 }
 </code></pre>
 <p>
-<strong>Explanation:</strong> Since <code>15 &lt; 13</code> is false, the <code>else</code>
-block executes.
+  <strong>Explanation:</strong> Since <code>15 &lt; 13</code> is false, the <code>else</code>
+  block executes.
 </p>
 <pre><code>
 // Example 3
@@ -681,13 +681,13 @@ if (!12) {
 }
 </code></pre>
 <p>
-<strong>Explanation:</strong> <code>12</code> is truthy, so <code>!12</code> becomes
-<code>false</code>, and the <code>else</code> block runs.
+  <strong>Explanation:</strong> <code>12</code> is truthy, so <code>!12</code> becomes
+  <code>false</code>, and the <code>else</code> block runs.
 </p>
 <hr>
 <h2>3. If - Else If - Else Statement</h2>
 <p>
-This structure is used when multiple conditions need to be checked.
+  This structure is used when multiple conditions need to be checked.
 </p>
 <pre><code>
 let logedin = true;
@@ -702,20 +702,20 @@ if (logedin && admin) {
 }
 </code></pre>
 <p>
-<strong>Explanation:</strong>
+  <strong>Explanation:</strong>
 </p>
 <ul>
-    <li>If the user is logged in and is an admin → Admin message</li>
-    <li>If the user is logged in but not an admin → User message</li>
-    <li>If the user is not logged in → Redirect message</li>
+  <li>If the user is logged in and is an admin → Admin message</li>
+  <li>If the user is logged in but not an admin → User message</li>
+  <li>If the user is not logged in → Redirect message</li>
 </ul>
 <hr>
 <h1>JavaScript Switch Case & Early Return Pattern</h1>
 <hr>
 <h2>1. Switch Case Statement</h2>
 <p>
-The <strong>switch</strong> statement compares a given value with multiple
-<code>case</code> values. When a match is found, that block of code is executed.
+  The <strong>switch</strong> statement compares a given value with multiple
+  <code>case</code> values. When a match is found, that block of code is executed.
 </p>
 <h3>Example 1</h3>
 <pre><code>
@@ -735,7 +735,7 @@ switch ('Today') {
 }
 </code></pre>
 <p>
-<strong>Explanation:</strong><br>
+  <strong>Explanation:</strong><br>
 <ul>
   <li><code>'Today'</code> value <code>case 'Today'</code> sathe match thase</li>
   <li>So output: <strong>A</strong></li>
@@ -763,15 +763,15 @@ switch (day) {
 }
 </code></pre>
 <p>
-<strong>Explanation:</strong><br>
-<code>day</code> ni value <strong>Monday</strong> che, etle output:
-<strong>"Start of the week"</strong>
+  <strong>Explanation:</strong><br>
+  <code>day</code> ni value <strong>Monday</strong> che, etle output:
+  <strong>"Start of the week"</strong>
 </p>
 <hr>
 <h2>2. Early Return Pattern</h2>
 <p>
-<strong>Early return</strong> pattern ma function ne jaldi return kari devay che
-jethi unnecessary condition check na thay.
+  <strong>Early return</strong> pattern ma function ne jaldi return kari devay che
+  jethi unnecessary condition check na thay.
 </p>
 <h3>Example 1 (Normal if-else)</h3>
 <pre><code>
@@ -791,7 +791,7 @@ function score(value) {
 score(100);
 </code></pre>
 <p>
-<strong>Note:</strong> Condition order important che, wrong order thi incorrect result avi sake.
+  <strong>Note:</strong> Condition order important che, wrong order thi incorrect result avi sake.
 </p>
 <hr>
 <h3>Example 2 (Early Return Pattern)</h3>
@@ -805,7 +805,7 @@ function score1(value) {
 }
 </code></pre>
 <p>
-<strong>Advantages of Early Return:</strong>
+  <strong>Advantages of Early Return:</strong>
 <ul>
   <li>Code clean & readable bane che</li>
   <li>Less nested conditions</li>
@@ -822,14 +822,14 @@ function score1(value) {
 </p>
 <h1>JavaScript Early Return Pattern</h1>
 <p>
-Early Return Pattern JavaScript ma function ne clean, readable ane efficient banava
-mate use thay che.
+  Early Return Pattern JavaScript ma function ne clean, readable ane efficient banava
+  mate use thay che.
 </p>
 <hr>
 <h2>What is Early Return?</h2>
 <p>
-Early return etle function ma condition match thata j value return kari devi,
-jethi baki na conditions check karva na pade.
+  Early return etle function ma condition match thata j value return kari devi,
+  jethi baki na conditions check karva na pade.
 </p>
 <ul>
   <li>Code short bane che</li>
@@ -854,7 +854,7 @@ function score(value) {
 }
 </code></pre>
 <p>
-<strong>Problems:</strong>
+  <strong>Problems:</strong>
 </p>
 <ul>
   <li><code>value &lt; 80</code> pehla check thay che</li>
@@ -873,7 +873,7 @@ function score(value) {
 }
 </code></pre>
 <p>
-<strong>Why this is correct?</strong>
+  <strong>Why this is correct?</strong>
 </p>
 <ul>
   <li>Conditions low to high order ma che</li>
@@ -892,7 +892,7 @@ function score1(value) {
 }
 </code></pre>
 <p>
-<strong>Issues:</strong>
+  <strong>Issues:</strong>
 </p>
 <ul>
   <li>Wrong return message</li>
@@ -933,7 +933,7 @@ function rps2(user, computer) {
 }
 </code></pre>
 <p>
-<strong>Advantages:</strong>
+  <strong>Advantages:</strong>
 </p>
 <ul>
   <li>Short and clean code</li>
@@ -946,7 +946,7 @@ function rps2(user, computer) {
 <hr>
 <h2>For Loop</h2>
 <p>
-Use a <b>for loop</b> when you know how many times you want to repeat a block of code.
+  Use a <b>for loop</b> when you know how many times you want to repeat a block of code.
 </p>
 <p><b>Syntax:</b></p>
 <pre><code>
@@ -969,7 +969,7 @@ for (let i = 20; i >= 10; i--) {
 <hr>
 <h2>While Loop</h2>
 <p>
-Use a <b>while loop</b> when the number of repetitions is not fixed.
+  Use a <b>while loop</b> when the number of repetitions is not fixed.
 </p>
 <p><b>Syntax:</b></p>
 <pre><code>
@@ -1006,7 +1006,7 @@ while (i < 5) {
 <hr>
 <h2>Do While Loop</h2>
 <p>
-A <b>do while loop</b> runs at least once even if the condition is false.
+  A <b>do while loop</b> runs at least once even if the condition is false.
 </p>
 <p><b>Syntax:</b></p>
 <pre><code>
@@ -1278,12 +1278,12 @@ for (let i = 1; i <= 100; i++) {
 </div>
 <h1>JavaScript Functions</h1>
 <p>
-A function is a block of code that performs a specific task.
+  A function is a block of code that performs a specific task.
 </p>
 <hr>
 <h2>What is a Function?</h2>
 <p>
-A function is a reusable block of code designed to perform a particular task.
+  A function is a reusable block of code designed to perform a particular task.
 </p>
 <h2>Why use Functions?</h2>
 <ul>
@@ -1294,7 +1294,7 @@ A function is a reusable block of code designed to perform a particular task.
 </ul>
 <h2>How to create a Function?</h2>
 <p>
-A function consists of the following parts:
+  A function consists of the following parts:
 </p>
 <ul>
   <li>Function keyword</li>
@@ -1307,24 +1307,24 @@ A function consists of the following parts:
 <h2>Types of Functions</h2>
 <h3>Function Declaration</h3>
 <p>
-function abc() { }
+  function abc() { }
 </p>
 <h3>Arrow Function (Fat Arrow Function)</h3>
 <p>
-let func1 = () => { }
+  let func1 = () => { }
 </p>
 <hr>
 <h2>Example: temp_cart Function</h2>
 <p>
-This function simulates adding a product to the cart.
+  This function simulates adding a product to the cart.
 </p>
 <p>
-function temp_cart(){<br>
-&nbsp;&nbsp;console.log("adding product")<br>
-}
+  function temp_cart(){<br>
+  &nbsp;&nbsp;console.log("adding product")<br>
+  }
 </p>
 <p>
-Function Calls:
+  Function Calls:
 </p>
 <ul>
   <li>temp_cart("laptop")</li>
@@ -1335,18 +1335,18 @@ Function Calls:
 <h2>Parameters vs Arguments</h2>
 <h3>Parameters</h3>
 <p>
-Parameters are the variables listed inside the parentheses in the function definition.
+  Parameters are the variables listed inside the parentheses in the function definition.
 </p>
 <h3>Arguments</h3>
 <p>
-Arguments are the actual values passed to the function when the function is called.
+  Arguments are the actual values passed to the function when the function is called.
 </p>
 <hr>
 <h2>Example: Single Parameter Function</h2>
 <p>
-function fullname(name){<br>
-&nbsp;&nbsp;console.log("My Name is: " + name)<br>
-}
+  function fullname(name){<br>
+  &nbsp;&nbsp;console.log("My Name is: " + name)<br>
+  }
 </p>
 <ul>
   <li>fullname("riddhi")</li>
@@ -1356,9 +1356,9 @@ function fullname(name){<br>
 <hr>
 <h2>Example: Multiple Parameters Function</h2>
 <p>
-function fullname1(name, surname){<br>
-&nbsp;&nbsp;console.log("Name: " + name + " Surname: " + surname)<br>
-}
+  function fullname1(name, surname){<br>
+  &nbsp;&nbsp;console.log("Name: " + name + " Surname: " + surname)<br>
+  }
 </p>
 <ul>
   <li>fullname1("riddhi", "jikadra")</li>
@@ -1370,8 +1370,8 @@ function fullname1(name, surname){<br>
 <h1>JavaScript Advanced Functions</h1>
 
 <p>
-This document explains arrow functions, function expressions, default parameters,
-rest parameters, early return, and first-class functions in JavaScript.
+  This document explains arrow functions, function expressions, default parameters,
+  rest parameters, early return, and first-class functions in JavaScript.
 </p>
 
 <hr>
@@ -1379,21 +1379,21 @@ rest parameters, early return, and first-class functions in JavaScript.
 <h2>Arrow Function</h2>
 
 <p>
-Arrow functions provide a shorter syntax to write functions.
+  Arrow functions provide a shorter syntax to write functions.
 </p>
 
 <p>
-let fullname2 = (name, surname) => {<br>
-&nbsp;&nbsp;console.log("arrow function -- Name:" + name + " surname: " + surname);<br>
-}
+  let fullname2 = (name, surname) => {<br>
+  &nbsp;&nbsp;console.log("arrow function -- Name:" + name + " surname: " + surname);<br>
+  }
 </p>
 
 <p>
-Function Call:
+  Function Call:
 </p>
 
 <p>
-fullname2("mansi", "maradiya")
+  fullname2("mansi", "maradiya")
 </p>
 
 <hr>
@@ -1401,21 +1401,21 @@ fullname2("mansi", "maradiya")
 <h2>Function Expression</h2>
 
 <p>
-A function can be stored inside a variable. This is called a function expression.
+  A function can be stored inside a variable. This is called a function expression.
 </p>
 
 <p>
-const fullname3 = function fullname1(name, surname) {<br>
-&nbsp;&nbsp;console.log("function expression -- Name:" + name + " surname: " + surname);<br>
-}
+  const fullname3 = function fullname1(name, surname) {<br>
+  &nbsp;&nbsp;console.log("function expression -- Name:" + name + " surname: " + surname);<br>
+  }
 </p>
 
 <p>
-Function Call:
+  Function Call:
 </p>
 
 <p>
-fullname3("jinal", "gohil")
+  fullname3("jinal", "gohil")
 </p>
 
 <hr>
@@ -1423,25 +1423,25 @@ fullname3("jinal", "gohil")
 <h2>Default Parameters</h2>
 
 <p>
-Default parameters allow assigning default values to function parameters.
+  Default parameters allow assigning default values to function parameters.
 </p>
 
 <p>
-function abcd(b = 10, price = 0) {<br>
-&nbsp;&nbsp;console.log(b, price);<br>
-}
+  function abcd(b = 10, price = 0) {<br>
+  &nbsp;&nbsp;console.log(b, price);<br>
+  }
 </p>
 
 <p>
-Function Call:
+  Function Call:
 </p>
 
 <p>
-abcd(15)
+  abcd(15)
 </p>
 
 <p>
-Use case example: platform fee, service charges, or fixed fees.
+  Use case example: platform fee, service charges, or fixed fees.
 </p>
 
 <hr>
@@ -1449,112 +1449,112 @@ Use case example: platform fee, service charges, or fixed fees.
 <h2>Rest Parameters</h2>
 
 <p>
-Rest parameters are used when we do not know how many arguments will be passed.
-They collect multiple arguments into an array.
+  Rest parameters are used when we do not know how many arguments will be passed.
+  They collect multiple arguments into an array.
 </p>
 
 <p>
-function def1(...name) {<br>
-&nbsp;&nbsp;console.log(name);<br>
-}
+  function def1(...name) {<br>
+  &nbsp;&nbsp;console.log(name);<br>
+  }
 </p>
 
 <p>
-Function Call:
+  Function Call:
 </p>
 
 <p>
-def1("mansi", "jinal", "riddhi")
+  def1("mansi", "jinal", "riddhi")
 </p>
 
 <p>
-Rest parameters can also be used with normal parameters.
+  Rest parameters can also be used with normal parameters.
 </p>
 
 <p>
-function def1(a, ...name) {<br>
-&nbsp;&nbsp;console.log(a, name);<br>
-}
+  function def1(a, ...name) {<br>
+  &nbsp;&nbsp;console.log(a, name);<br>
+  }
 </p>
 
 <p>
-Function Call:
+  Function Call:
 </p>
 
 <p>
-def1("mansi", "jinal", "riddhi")
+  def1("mansi", "jinal", "riddhi")
 </p>
 
 <hr>
 
 <h2>Early Return</h2>
 <p>
-Early return is used to exit a function as soon as a condition is met.
+  Early return is used to exit a function as soon as a condition is met.
 </p>
 <p>
-function score1(value) {<br>
-&nbsp;&nbsp;if (value &gt; 90) return "Value is less than 90";<br>
-&nbsp;&nbsp;else if (value &lt; 80) return "Value is less than 80";<br>
-&nbsp;&nbsp;else if (value &lt; 70) return "Value is less than 70";<br>
-&nbsp;&nbsp;else if (value &lt; 60) return "Value is less than 60";<br>
-&nbsp;&nbsp;else return "Value is more than 90";<br>
-}
+  function score1(value) {<br>
+  &nbsp;&nbsp;if (value &gt; 90) return "Value is less than 90";<br>
+  &nbsp;&nbsp;else if (value &lt; 80) return "Value is less than 80";<br>
+  &nbsp;&nbsp;else if (value &lt; 70) return "Value is less than 70";<br>
+  &nbsp;&nbsp;else if (value &lt; 60) return "Value is less than 60";<br>
+  &nbsp;&nbsp;else return "Value is more than 90";<br>
+  }
 </p>
 <p>
-Example:
+  Example:
 </p>
 <p>
-let result = score1(80)
+  let result = score1(80)
 </p>
 <hr>
 <h2>First-Class Functions</h2>
 <p>
-In JavaScript, functions are treated as first-class citizens.
-This means functions can be stored in variables, passed as arguments,
-and returned from other functions.
+  In JavaScript, functions are treated as first-class citizens.
+  This means functions can be stored in variables, passed as arguments,
+  and returned from other functions.
 </p>
 <h3>Function Stored in a Variable</h3>
 <p>
-const cart3 = function(product, price) {<br>
-&nbsp;&nbsp;console.log("Adding " + product + " at " + price);<br>
-}
+  const cart3 = function(product, price) {<br>
+  &nbsp;&nbsp;console.log("Adding " + product + " at " + price);<br>
+  }
 </p>
 <p>
-cart3("function expression - s25", 45000)
+  cart3("function expression - s25", 45000)
 </p>
 <hr>
 <h3>Function Passed as an Argument</h3>
 <p>
-function temp_b(fnc) {<br>
-&nbsp;&nbsp;fnc();<br>
-}
+  function temp_b(fnc) {<br>
+  &nbsp;&nbsp;fnc();<br>
+  }
 </p>
 <p>
-temp_b(function fnc2() {<br>
-&nbsp;&nbsp;console.log("First Class Function");<br>
-})
+  temp_b(function fnc2() {<br>
+  &nbsp;&nbsp;console.log("First Class Function");<br>
+  })
 </p>
 <hr>
 <h3>Function Returned from Another Function</h3>
 <p>
-function abcd() {<br>
-&nbsp;&nbsp;return function() {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;console.log("function return other function");<br>
-&nbsp;&nbsp;};<br>
-}
+  function abcd() {<br>
+  &nbsp;&nbsp;return function() {<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;console.log("function return other function");<br>
+  &nbsp;&nbsp;};<br>
+  }
 </p>
 <p>
-Function Call:
+  Function Call:
 </p>
 <p>
-abcd()();
+  abcd()();
 </p>
 <hr>
 <p><b>End of JavaScript Functions Documentation</b></p>
 <h2>Higher-Order Functions (HOF)</h2>
 
 <p>
-A higher-order function is a function that either:
+  A higher-order function is a function that either:
 <ul>
   <li>Takes another function as an argument</li>
   <li>Returns a function as a result</li>
@@ -1565,7 +1565,7 @@ These functions allow more flexible and reusable code.
 <h3>Example: Passing a Function as an Argument</h3>
 
 <p>
-A higher-order function can accept a function as a parameter:
+  A higher-order function can accept a function as a parameter:
 </p>
 
 <pre><code>
@@ -1579,7 +1579,7 @@ abcd(function() {
 
 <h3>Example: Returning a Function</h3>
 <p>
-A higher-order function can return another function:
+  A higher-order function can return another function:
 </p>
 <pre><code>
 function abcd() {
@@ -1589,3 +1589,586 @@ function abcd() {
 }
 abcd()(); // call the returned function
 </code></pre>
+<hr><hr>
+<h1>JavaScript Functions & Scope Examples</h1>
+
+<h2>1. Pure vs Impure Function</h2>
+
+<h3>Pure Function</h3>
+<p>
+  Pure function aevo function hoy chhe je:
+</p>
+<ul>
+  <li>Same input par hamesha same output aape</li>
+  <li>Koi pan <b>bahar na variable / state ne modify</b> na kare</li>
+</ul>
+
+<pre><code>
+// Pure Function
+let a = 10;
+
+function abcd_pure() {
+    console.log("Hello");
+}
+</code></pre>
+
+<p><b>Explanation:</b> Aa function koi external variable change karto nathi,
+etle aa <b>pure function</b> chhe.</p>
+
+<hr>
+
+<h3>Impure Function</h3>
+<p>
+  Impure function aevo hoy chhe je:
+</p>
+<ul>
+  <li>External state ne modify kare</li>
+  <li>Same input par different output aapi shake</li>
+</ul>
+
+<pre><code>
+// Impure Function
+function abcd_impure() {
+    a++;
+    console.log(a);
+}
+</code></pre>
+
+<p>
+  <b>Explanation:</b> Aa function bahar declare karel <code>a</code> variable ne
+change kare chhe, etle aa <b>impure function</b> chhe.
+</p>
+
+<hr>
+
+<h2>2. Closure Function</h2>
+<p>
+  Closure function aevo function hoy chhe je potana
+<b>parent function na variables ne access</b> kari shake,
+even parent function execute thai gaya pachi pan.
+</p>
+
+<pre><code>
+function outer() {
+    let count = 0;
+
+    function inner() {
+        count++;
+        console.log(count);
+    }
+    return inner;
+}
+
+let fnc = outer();
+fnc();
+</code></pre>
+
+<p>
+  <b>Explanation:</b> <code>inner()</code> function,
+<code>outer()</code> function na <code>count</code> variable ne
+access kare chhe — aa closure nu example chhe.
+</p>
+
+<hr>
+
+<h3>Another Closure Example</h3>
+
+<pre><code>
+function riddhi() {
+    let a1 = "mansi";
+
+    function nidhi() {
+        a1 += " jinal";
+        console.log(a1);
+    }
+    return nidhi;
+}
+
+let fnc1 = riddhi();
+fnc1();
+</code></pre>
+
+<p>
+  <b>Explanation:</b> <code>nidhi()</code> function
+<code>riddhi()</code> function na variable <code>a1</code> ne
+modify kare chhe, etle aa pan closure chhe.
+</p>
+
+<hr>
+
+<h2>3. Lexical Scope</h2>
+<p>
+  Lexical scope no matlab chhe ke
+<b>nested function potana outer function na variables ne access kari shake</b>.
+</p>
+
+<h3>Example 1</h3>
+
+<pre><code>
+function outer1() {
+    let outer_var = "outer function variable";
+
+    function inner1() {
+        let inner_var = "inner function variable";
+        console.log(outer_var);
+
+        function most_inner() {
+            console.log(inner_var);
+            console.log(outer_var);
+
+            let most_inner_var = "most inner function variable";
+            function abc() {
+                console.log(most_inner_var);
+                console.log(inner_var);
+                console.log(outer_var);
+            }
+            abc();
+        }
+        most_inner();
+    }
+    inner1();
+}
+outer1();
+</code></pre>
+
+<p>
+  <b>Explanation:</b> Andar na function,
+bahar na badha variables ne access kari shake chhe —
+aa lexical scope chhe.
+</p>
+
+<hr>
+
+<h3>Example 2</h3>
+
+<pre><code>
+function clg() {
+    let faculty = "abcd";
+
+    function fac() {
+        let student = "student abcd";
+        console.log(faculty);
+
+        function dumb_student() {
+            console.log(student);
+            console.log(faculty);
+        }
+        dumb_student();
+    }
+    fac();
+}
+clg();
+</code></pre>
+
+<p>
+  <b>Explanation:</b> <code>dumb_student()</code>
+function parent ane grandparent banne na variables access kare chhe.
+</p>
+
+<hr>
+
+<h2>4. IIFE (Immediately Invoked Function Expression)</h2>
+<p>
+  IIFE aevo function hoy chhe je
+<b>define karta j execute thai jai</b>.
+</p>
+
+<pre><code>
+(function () { })();
+</code></pre>
+
+<pre><code>
+(function () {
+    console.log("This Is IIFE Function");
+}());
+</code></pre>
+
+<p>
+  <b>Use:</b> Global scope pollution avoid karva mate.
+</p>
+
+<hr>
+
+<h2>5. Hoisting in Function</h2>
+<p>
+  Hoisting ma function ni declaration
+<b>execution pehla memory ma load</b> thai jai chhe.
+</p>
+
+<pre><code>
+abcde();
+
+function abcde() {
+    console.log("This is hoisting function");
+}
+</code></pre>
+
+<p>
+  <b>Explanation:</b> Normal function declaration hoisted hoy chhe,
+etle function call declaration pehla pan work kare chhe.
+</p>
+
+<hr>
+
+<h3>Function Expression & Arrow Function (Not Hoisted)</h3>
+
+<pre><code>
+// hostedFunction1();
+// let hostedFunction1 = function() {
+//     console.log("Function Expression");
+// }
+
+// hostedFunction2();
+// let hostedFunction2 = () => {
+//     console.log("Arrow Function");
+// }
+</code></pre>
+
+<p>
+  <b>Explanation:</b> Function expression ane arrow function
+hoisted nathi thati, etle error aave chhe.
+</p>
+## Function Examples
+<hr>
+<div>
+  <h1> Example 1: </h1>
+  <p>What's the difference between function declaration and function expression in terms of hoisting?</p>
+  <p>
+    <b>Answer:</b> Function declaration ma function declare pehla pan call thai sake,
+    pan function expression ma function declare karta pehla call kariye to error aave.
+  </p>
+</div>
+
+<div>
+  <h1> Example 2: </h1>
+  <pre><code>
+greet();
+
+function greet() {
+  console.log("Hello!");
+}
+  </code></pre>
+  <p><b>Answer:</b> "Hello!" print thase.</p>
+  <p><b>Why:</b> Function declaration hoisted hoy che, etle declaration pehla call thai sake.</p>
+</div>
+
+<div>
+  <h1> Example 3: </h1>
+  <p>Convert normal function to Arrow Function</p>
+  <pre><code>
+function add(a, b) {
+  return a + b;
+}
+  </code></pre>
+
+  <p><b>Answer:</b></p>
+  <pre><code>
+let add = (a, b) => a + b;
+
+add(5, 23);
+  </code></pre>
+</div>
+
+<div>
+  <h1> Example 4: </h1>
+  <p>Identify what is parameters and what is arguments</p>
+  <pre><code>
+function welcome(name) {
+  console.log("Welcome " + name);
+}
+
+welcome("user");
+  </code></pre>
+  <p><b>Answer:</b> <code>name</code> is parameter and <code>"user"</code> is argument.</p>
+  <p>
+    <b>Why:</b> Parameter function declaration time aave,
+    ane argument function call time pass thay.
+  </p>
+</div>
+
+<div>
+  <h1> Example 5: </h1>
+  <p>How many parameters and arguments?</p>
+  <pre><code>
+function temp(a, b, c) {
+  console.log(a, b, c);
+}
+
+temp(1, 2);
+  </code></pre>
+  <p><b>Answer:</b> Parameters = 3 (a, b, c) and Arguments = 2 (1, 2).</p>
+</div>
+
+<div>
+  <h1> Example 6: </h1>
+  <p>Predict the output</p>
+  <pre><code>
+function temp_user(name = "Guest") {
+  console.log("Hello " + name);
+}
+
+temp_user();
+  </code></pre>
+  <p><b>Answer:</b> Hello Guest</p>
+  <p>
+    <b>Why:</b> Default parameter value "Guest" use thay che
+    jyare argument pass na kariye.
+  </p>
+</div>
+
+<div>
+  <h1> Example 7: </h1>
+  <p>What is the <code>...</code> operator and why use it in function?</p>
+  <pre><code>
+function number(...numbers) {
+  console.log(numbers);
+}
+
+number(1, 2, 3, 4, 5);
+  </code></pre>
+  <p><b>Answer:</b> [1, 2, 3, 4, 5]</p>
+  <p>
+    <b>Why:</b> Rest operator multiple arguments ne ek array ma convert kare,
+    etle vadhare parameters handle kari sakiye.
+  </p>
+</div>
+
+<div>
+  <h1> Example 8: </h1>
+  <p>Use rest parameters to accept any number of scores and return the total</p>
+  <pre><code>
+function calculateTotal(...scores) {
+  let total = 0;
+  for (let i = 0; i <= scores.length; i++) {
+    total += scores[i];
+  }
+  return total;
+}
+
+function calculateTotalCorrect(...scores) {
+  let total = 0;
+  scores.forEach(function (val) {
+    total += val;
+  });
+  return total;
+}
+
+calculateTotal(10, 20, 30, 40, 50);
+let sumtotal = calculateTotalCorrect(10, 20, 30, 40, 50);
+  </code></pre>
+  <p><b>Ans / Err:</b> Error (NaN)</p>
+  <p>
+    <b>Why:</b> <code>i &lt;= scores.length</code> thi undefined value access thay che,
+    je NaN result aape che.
+  </p>
+</div>
+
+<div>
+  <h1> Example 9: </h1>
+  <p>Fix the function using early return</p>
+  <pre><code>
+function checkAge(age) {
+  if (age < 18) {
+    console.log("Too Young");
+    return;
+  }
+  console.log("Access Granted");
+}
+  </code></pre>
+  <p><b>Answer:</b> Early return use kari function clean banavi.</p>
+</div>
+
+<div>
+  <h1> Example 10: </h1>
+  <p>What is the return value of below function?</p>
+  <pre><code>
+function f() {
+  return;
+}
+  </code></pre>
+  <p><b>Answer:</b> <code>undefined</code></p>
+  <p><b>Why:</b> Return statement value vagar hoy to JavaScript <code>undefined</code> return kare.</p>
+</div>
+
+
+<div>
+  <h1> Example 11: </h1>
+  <p>What does it mean when we say "functions are first-class citizens"?</p>
+  <p><b>Ans:</b> Functions are treated like normal variables.</p>
+  <p><b>Why:</b> They can be assigned, passed, and returned.</p>
+</div>
+
+<div>
+  <h1> Example 12: </h1>
+  <p>Can you assign a function to a variable and call it?</p>
+  <pre><code>
+let a = function () {
+  console.log("Hello");
+};
+a();
+  </code></pre>
+  <p><b>Ans:</b> Yes.</p>
+  <p><b>Why:</b> Functions can be stored in variables.</p>
+</div>
+
+<div>
+  <h1> Example 13: </h1>
+  <p>Pass a function into another function and execute it.</p>
+  <pre><code>
+function abcd(val) {
+  val();
+}
+
+abcd(function () {
+  console.log("Hello");
+});
+  </code></pre>
+  <p><b>Ans:</b> Executes successfully.</p>
+  <p><b>Why:</b> Functions can be passed as arguments.</p>
+</div>
+
+<div>
+  <h1> Example 14: </h1>
+  <p>What is a higher-order function?</p>
+  <p><b>Ans:</b> A function that takes or returns another function.</p>
+  <p><b>Why:</b> It works with functions as values.</p>
+</div>
+
+<div>
+  <h1> Example 15: </h1>
+  <p>Identify the higher-order function.</p>
+  <pre><code>
+[1, 2, 3].map(function (x) {
+  return x * 2;
+});
+  </code></pre>
+  <p><b>Ans:</b> <code>map()</code>.</p>
+  <p><b>Why:</b> It accepts a function as an argument.</p>
+</div>
+
+<div>
+  <h1> Example 16: </h1>
+  <p>Pure or impure function?</p>
+  <pre><code>
+let total = 5;
+
+function num(num) {
+  total += num;
+}
+
+num(3);
+  </code></pre>
+  <p><b>Ans:</b> Impure function.</p>
+  <p><b>Why:</b> It modifies an external variable.</p>
+</div>
+
+<div>
+  <h1> Example 17: </h1>
+  <p>Convert example 16 into a pure function.</p>
+  <pre><code>
+function num(total, num) {
+  return total + num;
+}
+
+num(5, 3);
+  </code></pre>
+  <p><b>Ans:</b> Pure function.</p>
+  <p><b>Why:</b> Output depends only on inputs.</p>
+</div>
+
+<div>
+  <h1> Example 18: </h1>
+  <p>What is Closure? When is it created?</p>
+  <pre><code>
+function outer() {
+  let x = 10;
+  return function () {
+    console.log(x);
+  };
+}
+  </code></pre>
+  <p><b>Ans:</b> Closure remembers outer variables.</p>
+  <p><b>Why:</b> Created when inner function accesses outer scope.</p>
+</div>
+
+<div>
+  <h1> Example 19: </h1>
+  <p>What's logged?</p>
+  <pre><code>
+function outer() {
+  let count = 0;
+  return function () {
+    count++;
+    console.log(count);
+  };
+}
+
+const counter = outer();
+counter();
+counter();
+  </code></pre>
+  <p><b>Ans:</b> 1 then 2.</p>
+  <p><b>Err:</b> No error.</p>
+  <p><b>Why:</b> Closure preserves <code>count</code>.</p>
+</div>
+
+<div>
+  <h1> Example 20: </h1>
+  <p>Convert into an IIFE.</p>
+  <pre><code>
+(function () {
+  console.log("Initialized");
+})();
+  </code></pre>
+  <p><b>Ans:</b> Executes immediately.</p>
+  <p><b>Why:</b> IIFE runs as soon as it’s defined.</p>
+</div>
+
+<div>
+  <h1> Example 21: </h1>
+  <p>Use of IIFE with real-world example.</p>
+  <pre><code>
+let fun = (function () {
+  let score = 0;
+
+  return {
+    getScore: function () {
+      console.log(score);
+    },
+    setScore: function (val) {
+      score = val;
+    }
+  };
+})();
+  </code></pre>
+  <p><b>Ans:</b> Data privacy.</p>
+  <p><b>Why:</b> Creates private variables using closure.</p>
+</div>
+
+<div>
+  <h1> Example 22: </h1>
+  <p>What will be the output?</p>
+  <pre><code>
+temp_var();
+
+var temp_var = function () {
+  console.log("Hello");
+};
+  </code></pre>
+  <p><b>Ans:</b> Error (TypeError).</p>
+  <p><b>Why:</b> Function expressions are not hoisted.</p>
+</div>
+
+<div>
+  <h1> Example 23: </h1>
+  <p>What will be the output?</p>
+  <pre><code>
+temp_var();
+
+function temp_var() {
+  console.log("Hello");
+}
+  </code></pre>
+  <p><b>Ans:</b> Hello.</p>
+  <p><b>Why:</b> Function declarations are hoisted.</p>
+</div>
