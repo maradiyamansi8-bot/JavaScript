@@ -2171,4 +2171,403 @@ function temp_var() {
   </code></pre>
   <p><b>Ans:</b> Hello.</p>
   <p><b>Why:</b> Function declarations are hoisted.</p>
+
 </div>
+<h1>JavaScript Arrays – README</h1>
+
+<p>
+JavaScript <strong>Array</strong> ek aevu data structure chhe je ek saathe multiple values store kari shake.
+</p>
+
+<hr>
+
+<h2>What is an Array?</h2>
+
+<p>Array example:</p>
+
+<pre>
+[1, 2, 3, 4, 5]
+["hello", "a", "b", "c"]
+[2, "bye", "hello", 50]
+</pre>
+
+<hr>
+
+<h2>Create an Array</h2>
+
+<pre>
+let arr = [1, 2, 3, 4];
+</pre>
+
+<hr>
+
+<h2>Access Array Elements</h2>
+
+<p>
+Array index <strong>0</strong> thi start thay chhe.
+</p>
+
+<pre>
+arr[0]  // first element
+arr[2]  // third element
+arr[10] // undefined
+</pre>
+
+<hr>
+
+<h2>Modify Array Elements</h2>
+
+<pre>
+arr[0] = 10;
+</pre>
+
+<hr>
+
+<h2>Array Methods</h2>
+
+<p>
+JavaScript ma array sathe kaam karva mate different built-in methods chhe:
+</p>
+
+<ul>
+  <li>push</li>
+  <li>pop</li>
+  <li>shift</li>
+  <li>unshift</li>
+  <li>splice</li>
+  <li>slice</li>
+  <li>reverse</li>
+  <li>sort</li>
+</ul>
+
+<hr>
+
+<h2>push() – Add Value at Last</h2>
+
+<pre>
+let shoes_product = ["Skechers", "Puma", "Adidas"];
+shoes_product.push("Nike");
+</pre>
+
+<p><strong>Use case:</strong> Existing product list ma new product add karva.</p>
+
+<hr>
+
+<h2>pop() – Remove Last Value</h2>
+
+<pre>
+shoes_product.pop();
+</pre>
+
+<p><strong>Use case:</strong> Last add karelo product remove karva.</p>
+
+<hr>
+
+<h2>shift() – Remove First Value</h2>
+
+<pre>
+shoes_product.shift();
+</pre>
+
+<hr>
+
+<h2>unshift() – Add Value at First</h2>
+
+<pre>
+shoes_product.unshift("Asics");
+</pre>
+
+<p><strong>Use case:</strong> New data ne top par add karva.</p>
+
+<hr>
+
+<h2>splice() – Remove Specific Values</h2>
+
+<pre>
+let e = [50, 60, 30, 40, 10];
+e.splice(3, 2);
+</pre>
+
+<p>
+<strong>Explanation:</strong>  
+Index 3 thi start kari ne 2 values remove karse.
+</p>
+
+<p><strong>Use case:</strong> Multiple messages ya records ek saathe delete karva.</p>
+
+<hr>
+
+<h2>slice() – Copy Values</h2>
+
+<pre>
+let f = [100, 50, 25, 0];
+let new_f = f.slice(1, 3);
+</pre>
+
+<p>
+<strong>Note:</strong><br>
+Start index include thay chhe<br>
+End index include thato nathi
+</p>
+
+<p><strong>Use case:</strong> Specific data copy kari ne report generate karva.</p>
+
+<hr>
+
+<h2>splice() vs slice()</h2>
+
+<table border="1" cellpadding="5">
+  <tr>
+    <th>splice()</th>
+    <th>slice()</th>
+  </tr>
+  <tr>
+    <td>Main array ne modify kare chhe</td>
+    <td>Main array ne modify karto nathi</td>
+  </tr>
+  <tr>
+    <td>Values remove/add kari shake</td>
+    <td>Only copy kare</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>reverse() – Reverse Array</h2>
+
+<pre>
+let g = [25, 30, 35, 40, 85];
+g.reverse();
+</pre>
+
+<p><strong>Use case:</strong> Latest data ne first show karva (frontend).</p>
+
+<hr>
+
+<h2>sort() – Ascending Order</h2>
+
+<pre>
+let h = [50, 20, 80, 10, 40];
+h.sort();
+</pre>
+<h3>Numeric Sort (Proper Way)</h3>
+<pre>
+let b = [11, 62, 3, 4, 25];
+b.sort(function(a, b) {
+  return a - b;
+});
+</pre>
+</pre>
+<div>
+  <h1>Example 1: push()</h1>
+  <p>Add a new task <b>'Buy milk'</b> to the tasks array.</p>
+  <pre><code>
+let tasks = ['Wake up', 'Brush teeth'];
+tasks.push('Buy milk');
+  </code></pre>
+  <p><b>Ans:</b> <code>['Wake up', 'Brush teeth', 'Buy milk']</code></p>
+  <p><b>Why:</b> <code>push()</code> adds an element to the end of the array.</p>
+</div>
+
+<div>
+  <h1>Example 2: pop()</h1>
+  <p>Remove the last notification.</p>
+  <pre><code>
+let notifications = ['Email', 'Message', 'Reminder'];
+notifications.pop();
+  </code></pre>
+  <p><b>Ans:</b> <code>['Email', 'Message']</code></p>
+  <p><b>Why:</b> <code>pop()</code> removes the last element.</p>
+</div>
+
+<div>
+  <h1>Example 3: shift()</h1>
+  <p>Remove the first customer.</p>
+  <pre><code>
+let customers = ['Customer1', 'Customer2', 'Customer3'];
+customers.shift();
+  </code></pre>
+  <p><b>Ans:</b> <code>['Customer2', 'Customer3']</code></p>
+  <p><b>Why:</b> <code>shift()</code> removes the first element.</p>
+</div>
+
+<div>
+  <h1>Example 4: unshift()</h1>
+  <p>Add a song at the beginning.</p>
+  <pre><code>
+let playlist = ['Song B', 'Song C'];
+playlist.unshift('Song A');
+  </code></pre>
+  <p><b>Ans:</b> <code>['Song A', 'Song B', 'Song C']</code></p>
+  <p><b>Why:</b> <code>unshift()</code> adds elements at the start.</p>
+</div>
+
+<div>
+  <h1>Example 5: splice()</h1>
+  <p>Remove 'Alex' and add 'John' and 'Sara'.</p>
+  <pre><code>
+let students = ['Mike', 'Alex', 'Emma', 'Sophia'];
+students.splice(1, 1, 'John', 'Sara');
+  </code></pre>
+  <p><b>Ans:</b> <code>['Mike', 'John', 'Sara', 'Emma', 'Sophia']</code></p>
+  <p><b>Why:</b> <code>splice()</code> removes and inserts elements.</p>
+</div>
+
+<div>
+  <h1>Example 6: splice()</h1>
+  <p>Remove 2 items starting from index 1.</p>
+  <pre><code>
+let menu = ['Burger', 'Pizza', 'Pasta', 'Salad'];
+menu.splice(1, 2);
+  </code></pre>
+  <p><b>Ans:</b> <code>['Burger', 'Salad']</code></p>
+  <p><b>Why:</b> It removes items starting from given index.</p>
+</div>
+
+<div>
+  <h1>Example 7: slice()</h1>
+  <p>Create a new array with weekend days.</p>
+  <pre><code>
+let days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+let weekend = days.slice(5);
+  </code></pre>
+  <p><b>Ans:</b> <code>['Saturday', 'Sunday']</code></p>
+  <p><b>Why:</b> <code>slice()</code> does not modify original array.</p>
+</div>
+
+<div>
+  <h1>Example 8: reverse()</h1>
+  <p>Reverse game levels.</p>
+  <pre><code>
+let levels = ['Easy', 'Medium', 'Hard'];
+levels.reverse();
+  </code></pre>
+  <p><b>Ans:</b> <code>['Hard', 'Medium', 'Easy']</code></p>
+  <p><b>Why:</b> <code>reverse()</code> reverses array in place.</p>
+</div>
+
+<div>
+  <h1>Example 9: sort()</h1>
+  <p>Sort scores in ascending order.</p>
+  <pre><code>
+let scores = [45, 12, 78, 34, 89];
+scores.sort((a, b) => a - b);
+  </code></pre>
+  <p><b>Ans:</b> <code>[12, 34, 45, 78, 89]</code></p>
+  <p><b>Why:</b> Compare function ensures numeric sorting.</p>
+</div>
+
+<div>
+  <h1>Example 10: sort() with numbers</h1>
+  <pre><code>
+let prices = [199, 49, 999, 299, 149];
+prices.sort((a, b) => a - b);
+  </code></pre>
+  <p><b>Ans:</b> <code>[49, 149, 199, 299, 999]</code></p>
+</div>
+
+<div>
+  <h1>Example 11: slice() vs splice()</h1>
+  <pre><code>
+let products = ['Laptop','Phone','Tablet','Monitor','Keyboard'];
+let firstThree = products.slice(0, 3);
+  </code></pre>
+  <p><b>Ans:</b> <code>['Laptop','Phone','Tablet']</code></p>
+  <p><b>Why:</b> <code>slice()</code> keeps original array unchanged.</p>
+</div>
+
+<div>
+  <h1>Example 12: splice() complex</h1>
+  <pre><code>
+let colors = ['Red', 'Green', 'Blue', 'Yellow'];
+colors.splice(2, 1, 'Purple', 'Orange');
+  </code></pre>
+  <p><b>Ans:</b> <code>['Red','Green','Purple','Orange','Yellow']</code></p>
+</div>
+
+<div>
+  <h1>Example 13: reverse() + push()</h1>
+  <pre><code>
+let steps = ['Step 1', 'Step 2', 'Step 3'];
+steps.reverse();
+steps.push('Final Step');
+  </code></pre>
+  <p><b>Ans:</b> <code>['Step 3','Step 2','Step 1','Final Step']</code></p>
+</div>
+
+<div>
+  <h1>Example 14: sort() strings</h1>
+  <pre><code>
+let names = ['alice','Bob','charlie','David'];
+names.sort((a,b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+  </code></pre>
+  <p><b>Ans:</b> <code>['alice','Bob','charlie','David']</code></p>
+</div>
+
+<div>
+  <h1>Example 15: Combination</h1>
+  <pre><code>
+let movies = ['Avatar', 'Titanic', 'Gladiator'];
+movies.push('Inception');
+movies.shift();
+movies.sort();
+  </code></pre>
+  <p><b>Ans:</b> <code>['Gladiator','Inception','Titanic']</code></p>
+</div>
+
+<div>
+  <h1>Example 16: splice() return value</h1>
+  <p><b>Ans:</b> Returns an array of removed elements.</p>
+</div>
+
+<div>
+  <h1>Example 17: slice() immutability</h1>
+  <p><b>Ans:</b> Original array does NOT change.</p>
+</div>
+
+<div>
+  <h1>Example 18: sort() issue</h1>
+  <p><b>Ans:</b> Numbers are sorted as strings by default.</p>
+</div>
+
+<div>
+  <h1>Example 19: reverse() mutation</h1>
+  <p><b>Ans:</b> Both variables point to the same reversed array.</p>
+</div>
+
+<div>
+  <h1>Example 20: push() vs unshift()</h1>
+  <p><b>Ans:</b> <code>unshift()</code> is more expensive because it reindexes elements.</p>
+</div>
+
+<div>
+  <h1>Example 21: splice() deleteCount 0</h1>
+  <p><b>Ans:</b> No element removed, only insertion happens.</p>
+</div>
+
+<div>
+  <h1>Example 22: sort() strings</h1>
+  <p><b>Ans:</b> <code>['1','10','2']</code></p>
+</div>
+
+<div>
+  <h1>Example 23: slice() negative index</h1>
+  <p><b>Ans:</b> <code>[300, 400]</code></p>
+</div>
+
+<div>
+  <h1>Example 24: splice vs slice</h1>
+  <p><b>a)</b> Use <code>splice()</code></p>
+  <p><b>b)</b> Use <code>slice()</code></p>
+</div>
+
+<div>
+  <h1>Example 25: Chained methods</h1>
+  <pre><code>
+let arr2 = [1, 2, 3];
+arr2.push(arr2.shift());
+  </code></pre>
+  <p><b>Ans:</b> <code>[2, 3, 1]</code></p>
+</div>
+
+<hr><hr>
