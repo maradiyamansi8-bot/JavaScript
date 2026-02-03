@@ -2173,183 +2173,192 @@ function temp_var() {
   <p><b>Why:</b> Function declarations are hoisted.</p>
 
 </div>
-// Q1. push()
-// You are building a to-do app. Add a new task 'Buy milk' to the tasks array.
-let tasks = ['Wake up', 'Brush teeth'];
+<h1>JavaScript Arrays – README</h1>
 
-// Q2. pop()
-// Remove the last notification from the notifications array.
-let notifications = ['Email', 'Message', 'Reminder'];
+<p>
+JavaScript <strong>Array</strong> ek aevu data structure chhe je ek saathe multiple values store kari shake.
+</p>
 
-// Q3. shift()
-// A queue system removes the first customer. Remove the first customer.
-let customers = ['Customer1', 'Customer2', 'Customer3'];
+<hr>
 
-// Q4. unshift()
-// A new song is added to the beginning of the playlist.
-let playlist = ['Song B', 'Song C'];
+<h2>What is an Array?</h2>
 
-// Q5. splice()
-// In a classroom list, remove 'Alex' and add 'John' and 'Sara' in the same position.
-let students = ['Mike', 'Alex', 'Emma', 'Sophia'];
+<p>Array example:</p>
 
-// Q6. splice()
-// From the menu, remove 2 items starting from index 1.
-let menu = ['Burger', 'Pizza', 'Pasta', 'Salad'];
+<pre>
+[1, 2, 3, 4, 5]
+["hello", "a", "b", "c"]
+[2, "bye", "hello", 50]
+</pre>
 
-// Q7. slice()
-// Create a new array that contains only weekend days.
-let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+<hr>
 
-// Q8. reverse()
-// Reverse the order of levels in a game.
-let levels = ['Easy', 'Medium', 'Hard'];
+<h2>Create an Array</h2>
 
-// Q9. sort()
-// Sort the scores in ascending order.
-let scores = [45, 12, 78, 34, 89];
-
-// Q10. sort() with numbers
-// Sort the prices from lowest to highest.
-let prices = [199, 49, 999, 299, 149];
-
-// Q11. slice() vs splice()
-// From the array, create a new array of the first 3 items WITHOUT changing the original array.
-let products = ['Laptop', 'Phone', 'Tablet', 'Monitor', 'Keyboard'];
-
-// Q12. splice() complex
-// In the array below:
-// 1. Remove 'Blue'
-// 2. Add 'Purple' and 'Orange' at the same position
-let colors = ['Red', 'Green', 'Blue', 'Yellow'];
-ans:colors.splice(2, 1, 'Purple', 'Orange')
-
-// Q13. reverse() + push()
-// Reverse the array and then add 'Final Step' at the end.
-let steps = ['Step 1', 'Step 2', 'Step 3'];
-
-// Q14. sort() strings
-// Sort names alphabetically, ignoring case sensitivity.
-let names = ['alice', 'Bob', 'charlie', 'David'];
-ans: names.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
-
-// Q15. Combination Question
-// You are managing a movie watchlist:
-// 1. Add 'Inception'
-// 2. Remove the first movie
-// 3. Sort the list alphabetically
-let movies = ['Avatar', 'Titanic', 'Gladiator'];
-
-// Q16. splice() return value
-// What does the splice method return in this case?
-let nums1 = [1, 2, 3, 4];
-nums1.splice(1, 2);
-
-// Q17. slice() immutability check
-// After executing slice, does the original array change?
-let nums2 = [10, 20, 30, 40];
-let result = nums2.slice(1, 3);
-
-// Q19. reverse() mutation
-// After reversing, what happens to the original array reference?
-let letters = ['a', 'b', 'c'];
-let reversedLetters = letters.reverse();
-
-// Q21. splice() edge case
-// What happens if deleteCount is 0?
-let arr = ['x', 'y', 'z'];
-arr.splice(1, 0, 'new');
-
-// Q23. slice() negative index
-// What elements are returned?
-let values = [100, 200, 300, 400, 500];
-let sliced = values.slice(-3, -1);
-
-// Q24. splice() vs slice() decision
-// Which method would you use if you want to:
-// a) Update the original array
-// b) Keep the original array unchanged
-
-// Q25. Chained methods (brain teaser)
-// What is the final value of arr?
-let arr2 = [1, 2, 3];
-arr2.push(arr2.shift());//Array --Hold multiple valuesz at same time
-//[1, 2, 3, 4, 5]
-//["Hello","a","B","C"]
-//[2,"Bye","Hello",50]
-
-//create
-//define a variable = [multiple values]
+<pre>
 let arr = [1, 2, 3, 4];
+</pre>
 
-//access
-//position
-//access
-//array_name[position]
-//arr[3], arr[2], arr[10]
+<hr>
 
-//modify
-//array_name[position]=new value
-//arr[0]=10
+<h2>Access Array Elements</h2>
 
-//Array Methods:(variable_name.method_name)
-//push, pop, shift, unshift, splice. slice, reverse, sort
-//push --> enter new value into array -- place it into last
-arr.push(5);
+<p>
+Array index <strong>0</strong> thi start thay chhe.
+</p>
 
-//variable || function.method --> koi variable ke function in pachhal dot(.) kari ne lakho to te method kevai
-//use case -- enter new products into existing product list
-let beauty_product =["FaceWash","Searum","Scureb","Toner","Conditioner","Clenser"]
-beauty_product.push("Shampoo")
+<pre>
+arr[0]  // first element
+arr[2]  // third element
+arr[10] // undefined
+</pre>
 
-//pop --> remove last value into array
-beauty_product.pop()
-//use case -- remove last product you add into your list
+<hr>
 
-//shift -- remove first value into Array 
-beauty_product.shift()
-//use case --  remove old product automatic after sometimes
+<h2>Modify Array Elements</h2>
 
-//unshift -- add value into array -- first 
-beauty_product.unshift("Powder")
-//use case -- add a value into top of that data you receive
+<pre>
+arr[0] = 10;
+</pre>
 
-//splice -- remove value into array -- specific position and specific number of values
-//into() -- first index (position) , how many value you want to remove
-let e = [50,60,30,40,10];
-e.splice(3,2);
-//use case -- select msg and remove multiple msg at on click
+<hr>
 
-//slice - copy values from array -- specific position and specific number of values
-//new variable = array_name.slice(start index, end index)
-//start index -- include into copy
-//end index -- not include into copy
-let all_product=["FaceWash","Searum","Scureb","Toner","Conditioner","Clenser"];
-let face_product=all_product.slice(0,3)
-//use case -- copy specific data and save it into new variable
-//generate a report based on date and generate a file or save the file into your local machine
+<h2>Array Methods</h2>
 
-//splice vs slice
-//splice -- remove value into main array or modify new array
-//slice -- copy valuse from main array and create a new array that hold the value that you can into
+<p>
+JavaScript ma array sathe kaam karva mate different built-in methods chhe:
+</p>
 
-//reverse -- reverse value of array
+<ul>
+  <li>push</li>
+  <li>pop</li>
+  <li>shift</li>
+  <li>unshift</li>
+  <li>splice</li>
+  <li>slice</li>
+  <li>reverse</li>
+  <li>sort</li>
+</ul>
+
+<hr>
+
+<h2>push() – Add Value at Last</h2>
+
+<pre>
+let shoes_product = ["Skechers", "Puma", "Adidas"];
+shoes_product.push("Nike");
+</pre>
+
+<p><strong>Use case:</strong> Existing product list ma new product add karva.</p>
+
+<hr>
+
+<h2>pop() – Remove Last Value</h2>
+
+<pre>
+shoes_product.pop();
+</pre>
+
+<p><strong>Use case:</strong> Last add karelo product remove karva.</p>
+
+<hr>
+
+<h2>shift() – Remove First Value</h2>
+
+<pre>
+shoes_product.shift();
+</pre>
+
+<hr>
+
+<h2>unshift() – Add Value at First</h2>
+
+<pre>
+shoes_product.unshift("Asics");
+</pre>
+
+<p><strong>Use case:</strong> New data ne top par add karva.</p>
+
+<hr>
+
+<h2>splice() – Remove Specific Values</h2>
+
+<pre>
+let e = [50, 60, 30, 40, 10];
+e.splice(3, 2);
+</pre>
+
+<p>
+<strong>Explanation:</strong>  
+Index 3 thi start kari ne 2 values remove karse.
+</p>
+
+<p><strong>Use case:</strong> Multiple messages ya records ek saathe delete karva.</p>
+
+<hr>
+
+<h2>slice() – Copy Values</h2>
+
+<pre>
+let f = [100, 50, 25, 0];
+let new_f = f.slice(1, 3);
+</pre>
+
+<p>
+<strong>Note:</strong><br>
+Start index include thay chhe<br>
+End index include thato nathi
+</p>
+
+<p><strong>Use case:</strong> Specific data copy kari ne report generate karva.</p>
+
+<hr>
+
+<h2>splice() vs slice()</h2>
+
+<table border="1" cellpadding="5">
+  <tr>
+    <th>splice()</th>
+    <th>slice()</th>
+  </tr>
+  <tr>
+    <td>Main array ne modify kare chhe</td>
+    <td>Main array ne modify karto nathi</td>
+  </tr>
+  <tr>
+    <td>Values remove/add kari shake</td>
+    <td>Only copy kare</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>reverse() – Reverse Array</h2>
+
+<pre>
 let g = [25, 30, 35, 40, 85];
-//g.reverse();
-//use case -- show latest update first into your frontend
+g.reverse();
+</pre>
 
-//sort -- set into assending order
-let h = [50, 20, 80 , 10,40];
+<p><strong>Use case:</strong> Latest data ne first show karva (frontend).</p>
+
+<hr>
+
+<h2>sort() – Ascending Order</h2>
+
+<pre>
+let h = [50, 20, 80, 10, 40];
 h.sort();
-let h1=[11, 62, 3, 4,25];
-let sr = h1.sort(function(a,b){
-    return a - b;// ascending order
-})
-
-let h2 = [11, 62, 3, 4, 25];
-let sr1 = h2.sort(function(a1,b1){
-    return b1 - a1;// decending order
-})<div>
+</pre>
+<h3>Numeric Sort (Proper Way)</h3>
+<pre>
+let b = [11, 62, 3, 4, 25];
+b.sort(function(a, b) {
+  return a - b;
+});
+</pre>
+</pre>
+<div>
   <h1>Example 1: push()</h1>
   <p>Add a new task <b>'Buy milk'</b> to the tasks array.</p>
   <pre><code>
