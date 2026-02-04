@@ -2570,3 +2570,578 @@ arr2.push(arr2.shift());
   <p><b>Ans:</b> <code>[2, 3, 1]</code></p>
 </div>
 
+<hr><hr>
+<h1>JavaScript Array Methods Practice</h1>
+
+<p>
+Aa README file ma JavaScript na important array methods
+<b>sort</b>, <b>forEach</b>, ane <b>map</b>
+real-life examples sathe samjhavya chhe.
+</p>
+
+<hr>
+
+<h2>1. sort()</h2>
+<p>
+Array ne ascending order ma sort karva mate <b>sort()</b> method use thay chhe.
+</p>
+
+<pre><code>
+let arr2 = [11,22,33,30];
+let sort_var = arr2.sort((a,b) => a-b);
+
+let arr3 = ['b','h','e','s'];
+</code></pre>
+
+<hr>
+
+<h2>2. forEach()</h2>
+<p>
+forEach loop array ni darek value mate run thay chhe.
+Aa method koi new array return karto nathi.
+</p>
+
+<pre><code>
+let i9 = ["mansi","riddhi","jinal","nidhi"];
+
+i9.forEach(val => {
+  let new_val = "my name is " + val;
+  console.log(new_val);
+});
+</code></pre>
+
+<hr>
+
+<h2>3. map()</h2>
+<p>
+map() method tyare use thay chhe jyare
+<b>ek new array create karvo hoy</b>.
+forEach jevu j chhe pan map new array return kare chhe.
+</p>
+
+<pre><code>
+let data = [10,20,30,45];
+
+let temp_data = data.map(val => {
+  if (val > 20) {
+    return val;
+  }
+});
+</code></pre>
+
+<p>
+<b>Use case:</b>  
+Specific data ne new array ma store karva (jem ke electronics products).
+</p>
+
+<hr>
+
+<h2>map() – Real Life Examples</h2>
+
+<h3>1. Double daily steps count</h3>
+<pre><code>
+const steps = [1000, 2000, 3000];
+function doubleSteps(step) {
+  return step * 2;
+}
+const newSteps = steps.map(doubleSteps);
+console.log(newSteps);
+</code></pre>
+
+<h3>2. Convert minutes to seconds</h3>
+<pre><code>
+const minutes = [1, 5, 10];
+const seconds = minutes.map(min => min * 60);
+console.log(seconds);
+</code></pre>
+
+<h3>3. Add ₹50 delivery charge</h3>
+<pre><code>
+const prices1 = [200, 350, 500];
+const finalPrices = prices1.map(price => price + 50);
+console.log(finalPrices);
+</code></pre>
+
+<h3>4. Convert exam marks to Pass / Fail</h3>
+<pre><code>
+const marks = [35, 72, 88, 40];
+function getGrade(mark) {
+  return mark >= 40 ? 'Pass' : 'Fail';
+}
+const grades = marks.map(getGrade);
+console.log(grades);
+</code></pre>
+
+<h3>5. Capitalize names</h3>
+<pre><code>
+const names = ['rahul', 'neha', 'amit'];
+const formattedNames = names.map(
+  name => name[0].toUpperCase() + name.slice(1)
+);
+console.log(formattedNames);
+</code></pre>
+
+<h3>6. Apply 10% discount</h3>
+<pre><code>
+const prices = [500, 1000, 1500];
+function applyDiscount(price) {
+  return price - price * 0.10;
+}
+const discounted = prices.map(applyDiscount);
+console.log(discounted);
+</code></pre>
+
+<h3>7. Bonus points based on score</h3>
+<pre><code>
+const scores = [45, 60, 85];
+const finalScores = scores.map(score => {
+  if (score >= 80) return score + 20;
+  if (score >= 50) return score + 10;
+  return score;
+});
+console.log(finalScores);
+</code></pre>
+
+<h3>8. Celsius to Fahrenheit</h3>
+<pre><code>
+const celsius = [0, 20, 30];
+function toFahrenheit(temp) {
+  return (temp * 9/5) + 32;
+}
+const fahrenheit = celsius.map(toFahrenheit);
+console.log(fahrenheit);
+</code></pre>
+
+<h3>9. Generate table of numbers</h3>
+<pre><code>
+const numbers = [1, 2, 3, 4];
+const tableOfTwo = numbers.map(num => num * 2);
+console.log(tableOfTwo);
+</code></pre>
+
+<h3>10. Balance message formatting</h3>
+<pre><code>
+const balances = [500, 1200, 300];
+const messages = balances.map(
+  balance => `Your balance is ₹${balance}`
+);
+console.log(messages);
+</code></pre>
+
+<hr>
+<h1>JavaScript filter() Method</h1>
+
+<p>
+Aa section ma JavaScript no <b>filter()</b> method
+examples ane real-life use cases sathe explain karyo chhe.
+</p>
+
+<hr>
+
+<h2>filter() shu chhe?</h2>
+
+<p>
+<b>filter()</b tyare use karvu jyare
+<b>condition based ek new array create karvo hoy</b>.
+</p>
+
+<ul>
+  <li>Condition <b>true</b> hoy → value new array ma add thase</li>
+  <li>Condition <b>false</b> hoy → value add nahi thay</li>
+</ul>
+
+<hr>
+
+<h2>Basic Example – Expensive Laptops</h2>
+
+<pre><code>
+let leptops_price = [15000,20000,30000,65000,99000,45000];
+
+let expensive_laptops = leptops_price.filter(price => {
+  if (price > 30000) return true;
+});
+</code></pre>
+
+<p>
+30000 thi vadhare price hase te value
+new array ma store thase.
+</p>
+
+<hr>
+
+<h2>filter() – Real Life Examples</h2>
+
+<h3>1. Get Even Numbers</h3>
+<p><b>Real life:</b> Even roll numbers find karva</p>
+
+<pre><code>
+const numbers1 = [1, 2, 3, 4, 5, 6];
+const evenNumbers = numbers1.filter(num => num % 2 === 0);
+</code></pre>
+
+<hr>
+
+<h3>2. Filter Adults</h3>
+<p><b>Real life:</b> Only adults ne allow karva</p>
+
+<pre><code>
+const ages = [2, 1, 10, 16, 5];
+function isAdult(age) {
+  return age >= 18;
+}
+const adults = ages.filter(isAdult);
+</code></pre>
+
+<hr>
+
+<h3>3. Remove Empty Inputs</h3>
+<p><b>Real life:</b> User input clean karva</p>
+
+<pre><code>
+const inputs = ['Hello', '', 'World', '', 'JS'];
+const validInputs = inputs.filter(text => text !== '');
+</code></pre>
+
+<hr>
+
+<h3>4. Filter Passing Marks</h3>
+<p><b>Real life:</b> Exam result system</p>
+
+<pre><code>
+const marks1 = [35, 72, 88, 40, 25];
+const passedStudents = marks1.filter(mark => mark >= 40);
+</code></pre>
+
+<hr>
+
+<h3>5. Get Affordable Prices</h3>
+<p><b>Real life:</b> Shopping app price filter</p>
+
+<pre><code>
+const prices5 = [199, 499, 999, 1499, 299];
+const affordable = prices5.filter(price => price <= 500);
+</code></pre>
+
+<hr>
+
+<h3>6. Filter Long Words</h3>
+<p><b>Real life:</b> Search keyword validation</p>
+
+<pre><code>
+const words = ['hi', 'hello', 'javascript', 'ok'];
+function isLongWord(word) {
+  return word.length > 3;
+}
+const longWords = words.filter(isLongWord);
+</code></pre>
+
+<hr>
+
+<h3>7. Filter Positive Transactions</h3>
+<p><b>Real life:</b> Bank credits only</p>
+
+<pre><code>
+const transactions = [200, -100, 500, -50, 300];
+const credits = transactions.filter(amount => amount > 0);
+</code></pre>
+
+<hr>
+
+<h3>8. Filter Scores in Range</h3>
+<p><b>Real life:</b> Score selection</p>
+
+<pre><code>
+const scores9 = [45, 60, 85, 30, 90];
+const selectedScores = scores9.filter(
+  score => score >= 50 && score <= 90
+);
+</code></pre>
+
+<hr>
+
+<h3>9. Filter Shoe Brands</h3>
+<p><b>Real life:</b> Show only selected brands</p>
+
+<pre><code>
+let shhose_brand = ["Skechers","Puma","Adidas","Nike"];
+
+let shhose_brand_type = shhose_brand.filter(type => {
+  if (type === "Puma" || type === "Nike")
+    return true;
+});
+</code></pre>
+
+<hr>
+<p>
+<b>filter()</b method thi tame
+condition based data ne easily
+<b>new array ma store</b> kari sako chho.
+</p>
+<h1>JavaScript reduce() Method</h1>
+
+<p>
+Aa section ma JavaScript no <b>reduce()</b> method
+simple language ma ane real-life examples sathe explain karyo chhe.
+</p>
+
+<hr>
+
+<h2>reduce() shu chhe?</h2>
+
+<p>
+<b>reduce()</b tyare use karvu jyare
+<b>array mathi ek single value calculate</b> karvi hoy.
+</p>
+
+<p>
+Example:
+<ul>
+  <li>Total price</li>
+  <li>Sum of values</li>
+  <li>Maximum / minimum value</li>
+  <li>Count of items</li>
+</ul>
+</p>
+
+<hr>
+
+<h2>Basic Example – Total Price</h2>
+
+<pre><code>
+let totle_price = [15,68,45,58,52,48];
+
+let final_price = totle_price.reduce((a5, val) => {
+  return a5 + val;
+}, 0);
+</code></pre>
+
+<p>
+<b>Explanation:</b>
+</p>
+
+<ul>
+  <li><b>a5</b> → accumulator (previous returned value)</li>
+  <li><b>val</b> → array ni darek value</li>
+  <li><b>0</b> → initial value of accumulator</li>
+</ul>
+
+<hr>
+
+<h2>reduce() – Real Life Examples</h2>
+
+<h3>1. Total Money in Wallet</h3>
+<p><b>Real life:</b> All cash amounts add karva</p>
+
+<pre><code>
+const money = [100, 200, 50];
+const totalMoney = money.reduce((sum, amount) => sum + amount, 0);
+</code></pre>
+
+<hr>
+
+<h3>2. Total Steps Walked in a Week</h3>
+<p><b>Real life:</b> Fitness tracker</p>
+
+<pre><code>
+const steps9 = [3000, 5000, 4000, 6000];
+
+function addSteps(total, step) {
+  return total + step;
+}
+
+const weeklySteps = steps9.reduce(addSteps, 0);
+</code></pre>
+
+<hr>
+
+<h3>3. Total Cart Price</h3>
+<p><b>Real life:</b> Shopping bill</p>
+
+<pre><code>
+const prices9 = [499, 299, 199];
+const totalPrice = prices9.reduce(
+  (total, price) => total + price, 0
+);
+</code></pre>
+
+<hr>
+
+<h3>4. Find Maximum Score</h3>
+<p><b>Real life:</b> Highest exam mark</p>
+
+<pre><code>
+const marks9 = [45, 88, 67, 92];
+
+const highest = marks9.reduce((max, mark) => {
+  return mark > max ? mark : max;
+}, marks9[0]);
+</code></pre>
+
+<hr>
+
+<h3>5. Count Total Characters</h3>
+<p><b>Real life:</b> Text length calculation</p>
+
+<pre><code>
+const words9 = ['Hi', 'Hello', 'JS'];
+
+const totalChars = words9.reduce(
+  (count, word) => count + word.length, 0
+);
+</code></pre>
+
+<hr>
+
+<h3>6. Combine Words into a Sentence</h3>
+<p><b>Real life:</b> Message builder</p>
+
+<pre><code>
+const words8 = ['Learning', 'JavaScript', 'is', 'fun'];
+
+const sentence = words8.reduce(
+  (text, word) => text + ' ' + word
+);
+</code></pre>
+
+<hr>
+
+<h3>7. Count Passed Students</h3>
+<p><b>Real life:</b> Result summary</p>
+
+<pre><code>
+const marks6 = [35, 72, 88, 40, 25];
+
+const passCount = marks6.reduce((count, mark) => {
+  return mark >= 40 ? count + 1 : count;
+}, 0);
+</code></pre>
+
+<hr>
+
+<h3>8. Calculate Final Bank Balance</h3>
+<p><b>Real life:</b> Bank account calculation</p>
+
+<pre><code>
+const transactions8 = [1000, -200, -300, 500];
+
+const finalBalance = transactions8.reduce(
+  (balance, amount) => balance + amount, 0
+);
+</code></pre>
+
+<hr>
+
+<h3>9. Build Comma-Separated String</h3>
+<p><b>Real life:</b> Display values in UI</p>
+
+<pre><code>
+const items = ['Pen', 'Book', 'Pencil'];
+
+const result = items.reduce(
+  (text, item) => text + ', ' + item
+);
+</code></pre>
+<hr>
+<p>
+<b>reduce()</b method powerful chhe ane
+tame ek array mathi
+<b>any type ni single value</b> easily calculate kari sako chho.
+</p>
+
+<h2>Q1. Shopping App – Discounted Total</h2>
+  <p>Keep items costing more than 500, apply 10% discount, and find total:</p>
+  <pre><code>
+const prices12 = [200, 800, 1200, 450, 700];
+const total = prices12
+  .filter(price => price > 500)
+  .map(price => price * 0.9)
+  .reduce((sum, price) => sum + price, 0);
+  </code></pre>
+
+  <h2>Q2. Fitness App – Total Active Minutes</h2>
+  <p>Keep days with &gt;30 minutes, convert to calories, sum total:</p>
+  <pre><code>
+const minutes10 = [20, 45, 60, 15, 90];
+const totalCalories = minutes10
+  .filter(min => min > 30)
+  .map(min => min * 5)
+  .reduce((total, cal) => total + cal, 0);
+  </code></pre>
+
+  <h2>Q3. Exam System – Average of Passed Marks</h2>
+  <p>Keep passing marks (≥40) and calculate average:</p>
+  <pre><code>
+const marks10 = [35, 72, 88, 40, 25, 90];
+const passed = marks10.filter(mark => mark >= 40);
+const average = passed.reduce((sum, mark) => sum + mark, 0) / passed.length;
+  </code></pre>
+
+  <h2>Q4. Salary System – Monthly Payout</h2>
+  <p>Keep wages &gt;500, add 100 bonus, calculate total payout:</p>
+  <pre><code>
+const wages = [300, 800, 450, 1000, 600];
+const totalPayout = wages
+  .filter(wage => wage > 500)
+  .map(wage => wage + 100)
+  .reduce((total, wage) => total + wage, 0);
+  </code></pre>
+
+  <h2>Q5. Online Course – Completion Points</h2>
+  <p>Keep lessons ≥50%, convert to points, sum total:</p>
+  <pre><code>
+const progress = [20, 50, 75, 40, 100];
+const totalPoints = progress
+  .filter(p => p >= 50)
+  .map(p => p * 2)
+  .reduce((sum, p) => sum + p, 0);
+  </code></pre>
+
+  <h2>Q6. Bank Transactions – Final Balance</h2>
+  <p>Keep credits, add 2% interest, calculate total:</p>
+  <pre><code>
+const transactions10 = [1000, -500, 2000, -300, 1500];
+const creditedAmount = transactions10
+  .filter(amount => amount > 0)
+  .map(amount => amount * 1.02)
+  .reduce((total, amount) => total + amount, 0);
+  </code></pre>
+
+  <h2>Q7. Game App – Final Score</h2>
+  <p>Keep scores &gt;50, add 10 bonus points, sum total:</p>
+  <pre><code>
+const scores10 = [30, 60, 90, 45, 80];
+const finalScore = scores10
+  .filter(score => score > 50)
+  .map(score => score + 10)
+  .reduce((sum, score) => sum + score, 0);
+  </code></pre>
+
+  <h2>Q8. E-commerce – Total Taxed Amount</h2>
+  <p>Keep items &gt;1000, add 18% tax, calculate final amount:</p>
+  <pre><code>
+const prices4 = [500, 1200, 3000, 800, 1500];
+const finalAmount = prices4
+  .filter(price => price > 1000)
+  .map(price => price * 1.18)
+  .reduce((sum, price) => sum + price, 0);
+  </code></pre>
+
+  <h2>Q9. Attendance System – Reward Points</h2>
+  <p>Keep days ≥8 hours, convert to points, sum total:</p>
+  <pre><code>
+const hours = [6, 8, 9, 7, 10];
+const totalPoints10 = hours
+  .filter(hour => hour >= 8)
+  .map(hour => hour * 10)
+  .reduce((sum, point) => sum + point, 0);
+  </code></pre>
+
+  <h2>Q10. Interview Brain Teaser </h2>
+  <p>Keep even numbers, square them, sum total:</p>
+  <pre><code>
+const numbers10 = [1, 2, 3, 4, 5, 6];
+const sumOfSquares = numbers10
+  .filter(num => num % 2 === 0)
+  .map(num => num * num)
+  .reduce((sum, num) => sum + num, 0);
+  </code></pre>
