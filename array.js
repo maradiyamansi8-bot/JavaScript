@@ -24,7 +24,7 @@ arr.push(5);
 
 //variable || function.method --> koi variable ke function in pachhal dot(.) kari ne lakho to te method kevai
 //use case -- enter new products into existing product list
-let beauty_product =["FaceWash","Searum","Scureb","Toner","Conditioner","Clenser"]
+let beauty_product = ["FaceWash", "Searum", "Scureb", "Toner", "Conditioner", "Clenser"]
 beauty_product.push("Shampoo")
 
 //pop --> remove last value into array
@@ -41,16 +41,16 @@ beauty_product.unshift("Powder")
 
 //splice -- remove value into array -- specific position and specific number of values
 //into() -- first index (position) , how many value you want to remove
-let e = [50,60,30,40,10];
-e.splice(3,2);
+let e = [50, 60, 30, 40, 10];
+e.splice(3, 2);
 //use case -- select msg and remove multiple msg at on click
 
 //slice - copy values from array -- specific position and specific number of values
 //new variable = array_name.slice(start index, end index)
 //start index -- include into copy
 //end index -- not include into copy
-let all_product=["FaceWash","Searum","Scureb","Toner","Conditioner","Clenser"];
-let face_product=all_product.slice(0,3)
+let all_product = ["FaceWash", "Searum", "Scureb", "Toner", "Conditioner", "Clenser"];
+let face_product = all_product.slice(0, 3)
 //use case -- copy specific data and save it into new variable
 //generate a report based on date and generate a file or save the file into your local machine
 
@@ -64,43 +64,43 @@ let g = [25, 30, 35, 40, 85];
 //use case -- show latest update first into your frontend
 
 //sort -- set into assending order
-let h = [50, 20, 80 , 10,40];
+let h = [50, 20, 80, 10, 40];
 h.sort();
-let h1=[11, 62, 3, 4,25];
-let sr = h1.sort(function(a,b){
-    return a - b;// ascending order
+let h1 = [11, 62, 3, 4, 25];
+let sr = h1.sort(function (a, b) {
+  return a - b;// ascending order
 })
 
 let h2 = [11, 62, 3, 4, 25];
-let sr1 = h2.sort(function(a1,b1){
-    return b1 - a1;// decending order
+let sr1 = h2.sort(function (a1, b1) {
+  return b1 - a1;// decending order
 })
 
 let arr1 = [10, 2, 5, 20, 30]
-let sort_var = arr1.sort((a,b)=>a-b)// use when array give numbers or numeric value
+let sort_var = arr1.sort((a, b) => a - b)// use when array give numbers or numeric value
 let arr2 = ['b', 'z', 'q', 'm', 'k']
 
 let i = [10, 35, 40, 80]
 i.forEach(val => {
-    let new_val = val + 10;
-    console.log(new_val)
+  let new_val = val + 10;
+  console.log(new_val)
 });
 
-let name = ['mansi','jinal','nidhi','riddhi']
-name.forEach(val1 =>{
-    let var2= val1 + " : is my name";
-    console.log(var2)
+let name = ['mansi', 'jinal', 'nidhi', 'riddhi']
+name.forEach(val1 => {
+  let var2 = val1 + " : is my name";
+  console.log(var2)
 })
 
 //.map() method:
 //map tyare j use kaevu ke jare ek new array create karvo chhe
 //first map create a black array -- only for understanding
-let  data = [10, 20, 50, 40, 15];
+let data = [10, 20, 50, 40, 15];
 //same like a for each loop but map return a new array
-let temp_data = data.map(val =>{
-    if(val > 20){
-        return val;
-    }
+let temp_data = data.map(val => {
+  if (val > 20) {
+    return val;
+  }
 });
 //use case -- data mathi specific data new array ma store karvo hoy
 //ex. product ma thi specific category na product new array ma store karva hoy
@@ -122,7 +122,7 @@ console.log(newSteps)
 // Real life: Video duration calculation
 
 const minutes = [1, 5, 10];
-const seconds = minutes.map(function(min) {
+const seconds = minutes.map(function (min) {
   return min * 60;
 });
 console.log(seconds)
@@ -175,7 +175,7 @@ console.log(finalScores)
 
 const celsius = [0, 20, 30];
 function toFahrenheit(temp) {
-  return (temp * 9/5) + 32;
+  return (temp * 9 / 5) + 32;
 }
 const fahrenheit = celsius.map(toFahrenheit);
 console.log(fahrenheit)
@@ -201,13 +201,13 @@ console.log(messages)
 //if else(false) --> not add into new array
 let laptops_price1 = [15000, 20000, 30000, 65000, 99000, 45000];
 
-let expensive_laptop = laptops_price1.filter((price)=>{
-    if(price > 30000) return true;
+let expensive_laptop = laptops_price1.filter((price) => {
+  if (price > 30000) return true;
 });
 
 //je value 30000 thi vadhare chhe te new array ma add thase and biji value ne array ma add nahi kare
 // use case -- data ma thi specific data array ma store karvo hoy based on condition
- 
+
 
 //  1. Get even numbers
 // Real life: Find even roll numbers
@@ -263,20 +263,18 @@ const scores1 = [45, 60, 85, 30, 90];
 const selectedScores = scores1.filter(score => score >= 50 && score <= 90);
 
 //9.beuty_product mathi faceserume ni brads return kare 
-let beuty_product_brand = beauty_product.filter((type) =>
-{
-    if(type === "Searum" || type === "Conditioner") 
+let beuty_product_brand = beauty_product.filter((type) => {
+  if (type === "Searum" || type === "Conditioner")
     return true;
 })
 
 //reduce
 //reduce tyare j use karvu ke jyare ek single value calculate karvi hoy from array
-let total_price =[15,68, 45, 58, 52, 48];
+let total_price = [15, 68, 45, 58, 52, 48];
 
-let final_price = total_price.reduce((acc,val)=>
-{
-    return acc + val ;
-},0);//intial value of accumulator
+let final_price = total_price.reduce((acc, val) => {
+  return acc + val;
+}, 0);//intial value of accumulator
 
 // 0 + 10 => 10
 // 10 + 10 => 20
@@ -362,9 +360,9 @@ const total = numbers6.reduce((sum, num) => sum + num, 0);
 const prices9 = [200, 800, 1200, 450, 700];
 // Ans: 
 const total7 = prices
-.filter(price => price > 500)
-.map(price => price * 0.9)
-.reduce((sum, price) => sum + price, 0);
+  .filter(price => price > 500)
+  .map(price => price * 0.9)
+  .reduce((sum, price) => sum + price, 0);
 
 // Q2. Fitness App – Total Active Minutes
 // You are given daily activity minutes.
@@ -376,9 +374,9 @@ const total7 = prices
 const minutes1 = [20, 45, 60, 15, 90];
 //Ans:
 const totalCalories = minutes1
-.filter(min => min > 30)
-.map(min => min * 5)
-.reduce((total, cal) => total + cal, 0);
+  .filter(min => min > 30)
+  .map(min => min * 5)
+  .reduce((total, cal) => total + cal, 0);
 
 
 // Q3. Exam System – Average of Passed Marks
@@ -404,9 +402,9 @@ const average = passed.reduce((sum, mark) => sum + mark, 0) / passed.length;
 const wages = [300, 800, 450, 1000, 600];
 // Ans:
 const totalPayout = wages
-.filter(wage => wage > 500)
-.map(wage => wage + 100)
-.reduce((total, wage) => total + wage, 0);
+  .filter(wage => wage > 500)
+  .map(wage => wage + 100)
+  .reduce((total, wage) => total + wage, 0);
 
 // Q5. Online Course – Completion Points
 // You are given lesson completion percentages.
@@ -418,10 +416,10 @@ const totalPayout = wages
 const progress = [20, 50, 75, 40, 100];
 
 // Ans:
- const totalPoints = progress
-.filter(p => p >= 50)
-.map(p => p * 2)
-.reduce((sum, p) => sum + p, 0);
+const totalPoints = progress
+  .filter(p => p >= 50)
+  .map(p => p * 2)
+  .reduce((sum, p) => sum + p, 0);
 
 
 // ### Q6. Bank Transactions – Final Balance
@@ -435,9 +433,9 @@ const transactions3 = [1000, -500, 2000, -300, 1500];
 
 // Ans: 
 const creditedAmount = transactions3
-.filter(amount => amount > 0)
-.map(amount => amount * 1.02)
-.reduce((total, amount) => total + amount, 0);
+  .filter(amount => amount > 0)
+  .map(amount => amount * 1.02)
+  .reduce((total, amount) => total + amount, 0);
 
 // Q7. Game App – Final Score
 // You are given scores from multiple rounds.
@@ -449,10 +447,10 @@ const creditedAmount = transactions3
 const scores7 = [30, 60, 90, 45, 80];
 
 // Ans:
- const finalScore = scores7
-.filter(score => score > 50)
-.map(score => score + 10)
-.reduce((sum, score) => sum + score, 0);
+const finalScore = scores7
+  .filter(score => score > 50)
+  .map(score => score + 10)
+  .reduce((sum, score) => sum + score, 0);
 
 // Q8. E-commerce – Total Taxed Amount
 // You are given item prices.
@@ -465,9 +463,9 @@ const prices11 = [500, 1200, 3000, 800, 1500];
 
 // Ans: 
 const finalAmount = prices11
-.filter(price => price > 1000)
-.map(price => price * 1.18)
-.reduce((sum, price) => sum + price, 0);
+  .filter(price => price > 1000)
+  .map(price => price * 1.18)
+  .reduce((sum, price) => sum + price, 0);
 
 // Q9. Attendance System – Reward Points
 // You are given daily attendance hours.
@@ -479,9 +477,9 @@ const finalAmount = prices11
 const hours = [6, 8, 9, 7, 10];
 // ans: 
 const totalPoints1 = hours
-.filter(hour => hour >= 8)
-.map(hour => hour * 10)
-.reduce((sum, point) => sum + point, 0);
+  .filter(hour => hour >= 8)
+  .map(hour => hour * 10)
+  .reduce((sum, point) => sum + point, 0);
 
 //Q10. Interview Brain Teaser ⭐
 // You are given a list of numbers.
@@ -493,6 +491,96 @@ const totalPoints1 = hours
 const numbers4 = [1, 2, 3, 4, 5, 6];
 // ans: 
 const sumOfSquares = numbers4
-.filter(num => num % 2 === 0)
-.map(num => num * num)
-.reduce((sum, num) => sum + num, 0);
+  .filter(num => num % 2 === 0)
+  .map(num => num * num)
+  .reduce((sum, num) => sum + num, 0);
+
+//find tyrae j use karvu jyare array mathi ek value find karvi hoy based on condition
+//find() return kare chhe array no element --> callback no return value nahi
+//never returns what you return inside it 
+//returns the array element itself -- not return array
+//.find() stops at the first match
+//it does not continue looping
+
+let product = ["Laptop", "Mobile", "Tabel", "Desktop", "Smart Watch"];
+let find_product = product.find((item) => {
+  //console.log("can't find product");//not working whay??
+  if (item === "Mobile") {
+    return true;
+  } else if (item === "Tablet") {
+    return true;
+  } else {
+    return false;
+  }
+});
+//use case -- data ma thi ek value find karvi hoy based on condition
+//ex. product ma thi specific product find karvvo hoy based on name
+
+//find vs filter
+//Real-life Scenario: Shooping Mall Security
+//your are a security guard at a shopping mall 
+//check the list of visitors
+let people = ["John", "Sara", "Mike", "Anna", "David", "Sara"];
+//find --> you are looking for the first person named "Sara" in the list and stop searching (pehli var j male,bas e j and Angal check j na kare)
+let person = people.find((name) => name === "Sara");
+console.log(person);
+
+//filter -->you want to find all vistiors named "Sara" in the list(all datacheck kare and list ma)
+let AllSara = people.filter((name) => name === "Sara");
+console.log(AllSara);
+
+//some 
+//check kare chhe ke array ma koi pan ek item condition satisfy kare chhe ke nahi
+//condition true aave tyare stop kare
+//some() vs find() --> some() can't return you value its return true or false,find() return and false
+let marks2 = [10, 20, 35, 90];
+let any = marks2.some((val) => {
+  if (val > 85) return true;
+  //if (val < 85) return "need improvement";
+});
+console.log(any)
+//use case -- check if some product are out of stock in your cart
+
+//every
+//check kare chhe ke array ma j items condition satisfy kare chee ke nahi
+//true -- badha items condition match kare
+//false -- ek pan fail thay to
+let def = [20, 30, 90, 45];
+let num = def.every(function (val) {
+  return val < 40;
+})
+//use case -- check student is pass or not 
+
+//some(),find(),filter(),every()
+let products1 = ["Tablet", "Mobile", "Laptop", "Mobile"]
+//method --> condition --> output
+//.some() --> item === "Mobile" --> true
+//.find() --> item === "Mobile" --> "Mobile"
+//.filter() --> item === "Mobile" --> ["Mobile","Mobile"]
+//.every() --> item === "Mobile" --> false
+
+let find_product1 = products1.every((item) => {
+  if (item === "Mobile") {
+    return true;
+  }
+});
+//Destructuring operator -- give value to variable (EX. we don't use every time arr1[1],just save it into variable let [ ,k] = arr1)
+let arr4 = [1, 2, 3, 4, 5];
+//let j = arr4[0];
+//let k = arrr4[2];
+let [j, , k] = arr4; // --> destructuring
+//let [j,, k] == arr4;
+console.log(k);
+let user_data = ["test","text@gmail.com","Male","Surat"];
+let [name2,email,gender,city] = user_data
+console.log("Name:" , name2," Email:" , email ," Gender:" , gender ," City:" , city)
+
+//spread operator -- copy value from main array
+let arr8 =[1, 2, 3, 4, 5, 6, 7];
+//let arr4 = arr3; // -- just give referance not copy value (when you change into arr4 that will be change arr3 too)
+let arr9 =[...arr8];
+// ... --> rest -->into function
+// ... --> spread --> into Array and Object
+let temp_arr = [1, 2, 3];
+let temp_arr2 = [4, 5, 6];
+let mix_arr = [...temp_arr, ...temp_arr2]
